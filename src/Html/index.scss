@@ -1,0 +1,30 @@
+@import "../baseCss.scss";
+.yy-html {
+  min-height: rem(100px);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // background-color: #fff;
+  z-index: 999;
+  .web-view iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .rich-text {
+    padding: rem(10px);
+    color: #555;
+    font-size: rem(26px);
+    p {
+      margin: rem(10px) 0;
+    }
+  }
+  .img-view {
+    width: 100%;
+    .img-view-img {
+      width: 100%;
+    }
+  }
+}

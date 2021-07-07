@@ -1,0 +1,16 @@
+@import "../baseCss.scss";
+@import "~taro-ui/dist/style/components/divider.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+
+.yy-titleline {
+  background-color: #fff;
+  font-size: rem(16px);
+  height: rem(35px);
+
+  .at-divider {
+    &__content {
+      font-size: rem(16px);
+    }
+  }
+  
+}

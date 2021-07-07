@@ -1,0 +1,52 @@
+@import "../baseCss.scss";
+
+.yy-skus-materiels {
+  .yy-skus-materiels-group {
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 56px;
+
+    .yy-skus-group {
+      // width: 100%;
+    }
+    .yy-skus-group-title {
+      font-size: 30px;
+      margin-top: 26px;
+    }
+
+    .yy-skus-group-items {
+      margin-top: 33px;
+      color: $mainColor;
+
+      &-title {
+        // width: 15%;
+        display: inline-block;
+        line-height: 55px;
+        color: #000;
+        margin-right: 10px;
+      }
+
+      .yy-skus-items-group {
+        // width: 90%;
+      }
+
+      .yy-skus-item {
+        // width: 157px;
+        display: inline-block;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 20px;
+        text-align: center;
+        border: 1px solid $mainColor;
+        border-radius: 55px;
+        margin-right: 38px;
+        margin-bottom: 22px;
+      }
+
+      .yy-skus-item-color {
+        color: #fff;
+        background-color: $mainColor;
+      }
+    }
+  }
+}

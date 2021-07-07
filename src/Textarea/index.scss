@@ -1,0 +1,18 @@
+@import "../baseCss.scss";
+.yy-textarea {
+  display: flex;
+  flex-direction: row;
+  padding: rem(5px);
+  &-label {
+    width: rem(40px);
+    line-height: 2;
+  }
+  &-value {
+    flex: 1;
+    width: 100%;
+    textarea {
+      background-color: #fff;
+      padding: rem(5px);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "../baseCss.scss";
+
+.yy-location-main {
+    // width: 100%;
+    padding: rem(20px/2) rem(10px/2);
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    // border-radius: rem(22px/2);
+    @include font-family();
+    .yy-address{
+        margin:0 rem(18px/2);
+        width:rem(44px/2);
+        height: rem(44px/2);
+    }
+    .yy-address_text{
+        flex: 1;
+        .yy-address_del{
+            color: #000;
+            font-size: rem(24px/2);
+            display: block;
+        }
+        .yy-address_len{
+            color: #000;
+            font-size: rem(20px/2);
+            display: block;
+        }
+        .yy-address_len{
+            font-size: rem(20px/2);
+            display: block;
+        }
+    }
+    .yy-address_switch{
+        width: rem(220px/2);
+        height: rem(46px/2);
+        padding: rem(2px);
+        margin-left: rem(10px/2);
+        margin-right: rem(21px/2);
+        
+        background-color: $mainColor;
+        border-radius: rem(30px/2);
+        .yy-location-switch{
+            @include clearfix;
+            color: #fff;
+            .yy-switch_item{
+                @include left; 
+                width: rem(105px/2);
+                font-size: rem(30px/2);
+                height: rem(40px/2);
+                line-height: rem(40px/2);
+                color: #fff;
+                font-weight: bold;
+                text-align: center;
+            }
+            .yy-switch_checked{
+                background-color: #fff;
+                color: $mainColor;
+                border-radius: rem(30px/2);
+                height: rem(40px/2);
+                line-height: rem(40px/2);
+            }
+        }
+    }
+}
