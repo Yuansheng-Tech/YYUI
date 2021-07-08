@@ -26,7 +26,7 @@
     "url": "git+https://github.com/Yuansheng-Tech/YYUI.git"
   },
   "license": "MIT",
-  "author": "colder",
+  "author": "Fu Yin",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "source": "src/index.ts",
