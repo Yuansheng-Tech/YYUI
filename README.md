@@ -1,6 +1,6 @@
 # YYUI
 
-[![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][david-dm-url] [![License][license-image]][license-url]
+[![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][![License][license-image]][license-url]
 
 一款基于 `Taro` 框架开发的电商 UI 组件库
 
@@ -37,7 +37,5 @@ MIT
 [npm-version-url]: https://www.npmjs.com/package/@ysyp/ui
 [npm-downloads-image]: https://img.shields.io/npm/dm/@ysyp/ui?style=flat-square
 [npm-downloads-url]: https://www.npmjs.com/package/@ysyp/ui
-[david-dm-image]: https://david-dm.org/NervJS/taro-ui.svg?style=flat-square
-[david-dm-url]: https://david-dm.org/NervJS/taro-ui
 [license-image]: https://img.shields.io/github/license/Yuansheng-Tech/YYUI?style=flat-square
 [license-url]: https://github.com/Yuansheng-Tech/YYUI/blob/master/LICENSE
