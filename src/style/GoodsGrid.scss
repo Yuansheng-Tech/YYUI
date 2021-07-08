@@ -1,0 +1,55 @@
+// @import './baseCss.scss';
+.yy-goods {
+  &-item {
+    padding: rem(0px) rem(5px);
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-left: rem(5px);
+    margin-top: rem(5px);
+    box-sizing: border-box;
+    // border-radius: rem(10px);
+
+    &-imaga {
+      display: block;
+    }
+    &-title {
+      display: block;
+      margin-top: rem(5px);
+      font-size: rem(16px);
+      font-weight: 500;
+      color: #353535;
+      padding: 0 rem(5px) rem(10px);
+    }
+  }
+  &-prices {
+    padding: 0 rem(5px) rem(5px);
+  }
+  &-price {
+    color: #e60b30;
+    font-size: rem(16px);
+  }
+  &-original-price {
+    font-size: rem(12px);
+    text-decoration: line-through;
+    margin-left: rem(5px);
+  }
+  &-cart {
+    color: #e60b30;
+    float: right;
+  }
+}
+
+.yy-goods-imageLeft-type {
+  .yy-goods-item-left {
+    width: rem(100px);
+    float: left;
+  }
+  .yy-goods-item-desc {
+    float: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .yy-goods-item-title {
+    flex: 1;
+  }
+}

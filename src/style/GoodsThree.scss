@@ -1,0 +1,86 @@
+// @import './baseCss.scss';
+.yy-goods {
+  &-three {
+    overflow-y: hidden;
+    padding: rem(10px) 0;
+  }
+  &-three-item {
+    margin: rem(0px) rem(5px) rem(10px);
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #fff;
+    &-image {
+      display: block;
+      width: 100%;
+      height: calc(100% - 90px);
+    }
+    &-title {
+      display: block;
+      margin-top: rem(5px);
+      padding: rem(5px);
+      font-size: rem(16px);
+      font-weight: 500;
+      color: #353535;
+    }
+  }
+}
+.three-left-type {
+  float: left;
+  &:nth-child(1) {
+    height: calc(100% - 10px);
+    width: calc(50% - 20px);
+  }
+  &:nth-child(2) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+  &:nth-child(3) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+}
+.three-right-type {
+  float: right;
+  &:nth-child(1) {
+    height: calc(100% - 10px);
+    width: calc(50% - 20px);
+  }
+  &:nth-child(2) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+  &:nth-child(3) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+}
+.three-top-type {
+  float: left;
+  &:nth-child(1) {
+    height: calc(50% - 10px);
+    width: calc(100% - 20px);
+  }
+  &:nth-child(2) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+  &:nth-child(3) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+}
+.three-bottom-type {
+  float: right;
+  &:nth-child(3) {
+    height: calc(50% - 10px);
+    width: calc(100% - 20px);
+  }
+  &:nth-child(2) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+  &:nth-child(1) {
+    height: calc(50% - 10px);
+    width: calc(50% - 20px);
+  }
+}

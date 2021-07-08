@@ -1,0 +1,83 @@
+// @import './baseCss.scss';
+
+@import '~taro-ui/dist/style/components/list.scss';
+@import '~taro-ui/dist/style/components/checkbox.scss';
+@import '~taro-ui/dist/style/components/icon.scss';
+
+.yy-cart-list {
+  // width: 706px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  // border-radius: $border-radius;
+
+  .shop-item {
+    padding: 29px 13px 22px 16px;
+    border-bottom: 2px solid #7c7c7c;
+    position: relative;
+    .left {
+      .left-img1 {
+        // width: 35px;
+        // height: 35px;
+        margin-top: 44px;
+        margin-right: 13px;
+      }
+      .left-img3 {
+        width: 111px;
+        min-width: 111px;
+        max-width: 111px;
+        height: 113px;
+      }
+      .des {
+        margin-left: 15px;
+        .des1 {
+          font-size: 33px;
+          font-weight: 400;
+          color: #000;
+          .des1-1 {
+            font-size: 25px;
+            font-weight: normal;
+            color: rgba(107, 107, 107, 1);
+          }
+        }
+        .des2 {
+          font-size: 25px;
+          font-weight: normal;
+          color: #000;
+        }
+        .des3 {
+          font-size: 33px;
+
+          font-weight: bold;
+          color: #000;
+          margin-top: 20px;
+        }
+      }
+    }
+    .right {
+      position: absolute;
+      right: 13px;
+      bottom: 29px;
+    }
+    .kcbz {
+      font-size: 25px;
+      font-weight: normal;
+      color: #000;
+      margin-top: 9px;
+      margin-left: 64px;
+    }
+  }
+  .img-text {
+    width: 108px;
+    height: 108px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    // background-color: green;
+    // color: #fff;
+    padding: 5px;
+    display: flex;
+    overflow: hidden;
+    color: #aaa;
+  }
+}

@@ -1,0 +1,87 @@
+$taroBasePx: 40 / (375 / 320 * 20); // 1.7
+$baseRem: 1 / $taroBasePx * 1.7 * 2;
+
+$mainColor: red;
+$baseSize: 16px;
+
+// $baseFontSize: 16px;
+
+@function rem($w) {
+  @return $w * $baseRem;
+}
+
+@mixin setBacImg($url, $width, $height) {
+  background-image: url($url);
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+@mixin setCoverImg($url, $width, $height) {
+  background-image: url($url);
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@mixin eject($attr, $value) {
+  #{$attr}: $value;
+}
+
+@mixin appearance-none() {
+  appearance: none;
+}
+
+input,
+textarea {
+  @include appearance-none;
+  display: block;
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin clearfix() {
+  zoom: 1;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin left() {
+  float: left;
+}
+
+@mixin right() {
+  float: right;
+}
+
+@mixin main-wrap {
+  height: 100%;
+}
+
+@mixin font-family() {
+  font-family: 'FZShuTi';
+}
+
+/* 改变主题变量，具体变量名可查看 taro-ui/dist/style/variables/default.scss 文件 */
+$color-brand: #6190e8;
+/* 引入 Taro UI 默认样式 */
+/* Variables */
+@import '~taro-ui/dist/style/variables/default.scss';
+
+/* Mixin */
+@import '~taro-ui/dist/style/mixins/index.scss';

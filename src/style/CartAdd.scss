@@ -1,0 +1,42 @@
+// @import './baseCss.scss';
+
+.yy-cartadd {
+  display: flex;
+  flex-direction: row;
+  padding: rem(10px);
+  font-size: rem(14px);
+  // background: #fff;
+
+  &-title {
+    flex: 2;
+    font-weight: 400;
+  }
+  &-subtitle {
+    color: #999;
+    margin-left: rem(5px);
+  }
+  &-add {
+    width: rem(80px);
+    display: flex;
+    justify-content: space-between;
+  }
+  &-num {
+    font-size: rem(16px);
+    font-weight: normal;
+    color: #000;
+    line-height: rem(20px);
+  }
+  &-circle {
+    width: rem(20px);
+    height: rem(20px);
+    border-radius: rem(20px);
+    border: 1px solid #000;
+    text-align: center;
+    font-size: rem(20px);
+    line-height: rem(16px);
+  }
+  &-minus-circle {
+  }
+  &-plus-circle {
+  }
+}

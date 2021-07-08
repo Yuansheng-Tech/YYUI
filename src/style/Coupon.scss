@@ -1,0 +1,161 @@
+// @import './baseCss.scss';
+.yy-coupon {
+  background-color: rgb(255, 245, 225);
+  width: 100%;
+  &-item {
+    height: rem(80px);
+    display: flex;
+    color: rgb(255, 131, 11);
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: rem(5px);
+  }
+
+  &-left {
+    border-color: rgb(255, 131, 11);
+    border-top-width: rem(1px);
+    border-top-style: solid;
+    border-bottom-width: rem(1px);
+    border-bottom-style: solid;
+    border-left-width: rem(1px);
+    border-left-style: solid;
+    width: rem(100px);
+    border-top-left-radius: rem(8px);
+    border-bottom-left-radius: rem(8px);
+    margin: rem(5px) 0 rem(5px) rem(5px);
+    position: relative;
+  }
+  &-price {
+    line-height: rem(26px);
+    margin-top: rem(12.5px);
+    font-size: rem(22px);
+    font-weight: 700;
+    text-align: center;
+    &-symbol {
+      font-size: rem(12px);
+      font-weight: 500;
+    }
+    &-number {
+    }
+    &-label {
+      display: block;
+      line-height: rem(18px);
+      font-size: rem(12px);
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+  &-middle {
+    width: rem(14px);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    &-top {
+      transform: translate(-50%, -50%);
+      position: absolute;
+      border-radius: 50%;
+      left: 50%;
+      width: rem(8px);
+      height: rem(8px);
+      background: #fff;
+    }
+    &-center {
+      width: rem(14px);
+      height: calc(100% - rem(10px));
+      margin: rem(5px) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    &-a {
+      display: block;
+      width: rem(8px);
+      height: rem(55px);
+      background-image: radial-gradient(circle, #fff 30%, transparent 35%);
+      background-size: rem(8px) rem(11px);
+      background-repeat: repeat-y;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &-b {
+      top: -rem(11px);
+      width: rem(16px);
+      height: rem(16px);
+      border: rem(1px) solid transparent;
+      border-color: rgb(255, 131, 11);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-c {
+      bottom: -rem(11px);
+      width: rem(16px);
+      height: rem(16px);
+      border: rem(1px) solid transparent;
+      border-color: rgb(255, 131, 11);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-bottom {
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      position: absolute;
+      border-radius: 50%;
+      left: 50%;
+      width: rem(8px);
+      height: rem(8px);
+      background: #fff;
+    }
+  }
+  &-right {
+    display: flex;
+    border-top-width: rem(1px);
+    border-top-style: solid;
+    border-bottom-width: rem(1px);
+    border-bottom-style: solid;
+    border-right-width: rem(1px);
+    border-right-style: solid;
+    // width: rem(230px);
+    flex: 1;
+    margin: rem(5px) rem(5px) rem(5px) 0;
+    border-top-right-radius: rem(8px);
+    border-bottom-right-radius: rem(8px);
+    padding: rem(3.5) 0;
+    position: relative;
+
+    &-content {
+      display: flex;
+      padding: rem(11px) 0 rem(11px) rem(13px);
+      justify-content: space-between;
+      flex-direction: column;
+      flex: 1;
+    }
+    &-title {
+      display: block;
+      flex: 1;
+      font-size: rem(15px);
+      font-weight: 500;
+      line-height: rem(20px);
+    }
+    &-subtitle {
+      display: block;
+      flex: 1;
+      font-size: rem(11px);
+      font-family: PingFang SC;
+      font-weight: 500;
+      line-height: rem(14px);
+    }
+    &-action {
+      width: rem(63px);
+      height: rem(63px);
+      line-height: rem(63px);
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}

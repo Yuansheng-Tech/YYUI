@@ -1,0 +1,36 @@
+// @import './baseCss.scss';
+.yy-cart-good {
+  &-item {
+    padding: rem(0px) rem(5px);
+    box-sizing: border-box;
+    // background-color: #fff;
+    // margin-left: rem(5px);
+    // margin-top: rem(5px);
+    box-sizing: border-box;
+    display: flex;
+
+    &-image {
+      display: block;
+    }
+    &-title {
+      display: block;
+      margin-top: rem(5px);
+      font-size: rem(16px);
+      font-weight: 500;
+      color: #353535;
+      padding: 0 rem(5px) rem(10px);
+    }
+  }
+  &-prices {
+    padding: 0 rem(5px) rem(5px);
+  }
+  &-price {
+    color: #e60b30;
+    font-size: rem(16px);
+  }
+  &-original-price {
+    font-size: rem(12px);
+    text-decoration: line-through;
+    margin-left: rem(5px);
+  }
+}
