@@ -23,7 +23,7 @@ export interface IShopItemView {
 export const YYShopItem = (props: IShopItemView) => {
   const selectShop = Taro.getStorageSync('selectShop');
   const [chooseShop, setcChooseShop] = React.useState(selectShop)
-  const { item, index } = props
+  const { item, index, jumpShop } = props
   return (<View key={index} className={classnames({
     "shop-item": true,
     "shop-item-active": item.id === chooseShop.id
@@ -38,7 +38,7 @@ export const YYShopItem = (props: IShopItemView) => {
     </View>
     <View className="shop-item-right" onClick={() => {
       Taro.setStorageSync('selectShop', item);
-      props.jumpShop(item);
+      jumpShop && jumpShop(item);
     }}>
       <Text className="shop-item-choose">选择</Text>
       <Text className="shop-item-distance">距离{item.distanceSpace}km</Text>

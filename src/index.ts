@@ -39,8 +39,6 @@ export { YYImg } from './Article/img'
 export { YYShopItem } from './Shop/item'
 export { YYShopList } from './Shop/list'
 
-export { YYIOSCard } from './IOSCard/index'
-
 // others
 export * from './config'
 export * from './renderData'
