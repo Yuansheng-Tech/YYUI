@@ -1,6 +1,6 @@
 # YYUI
 
-[![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][![License][license-image]][license-url]
+[![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][npm-version-url] [![License][license-image]][license-url]
 
 一款基于 `Taro` 框架开发的电商 UI 组件库
 
