@@ -5,6 +5,7 @@
 一款基于 `Taro` 框架开发的电商 UI 组件库
 
 > YYUI 可能会出现较大改动并且不保证功能完整可用，请谨慎使用。
+
 ## 安装
 
 在项目中安装 YYUI
@@ -18,12 +19,13 @@ npm install @ysyp/ui
 在代码中 `import` 需要的组件并按照文档说明使用
 
 ```js
-import { YYButton, YYShopList } from '@ysyp/ui'
+import { YYButton, YYShopList } from '@ysyp/ui';
 ```
 
 ## 开发交流
 
-[官方微信交流群](https://github.com/Yuansheng-Tech/YYUI/issues)
+[Issues
+](https://github.com/Yuansheng-Tech/YYUI/issues)
 
 ## 开发计划
 

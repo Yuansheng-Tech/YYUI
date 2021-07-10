@@ -76,6 +76,7 @@
     "@tarojs/components": "^3.2.9",
     "@tarojs/taro": "^3.2.9",
     "@types/classnames": "^2.3.1",
+    "@ysyp/stores": "^0.1.1",
     "@ysyp/utils": "^0.3.0",
     "taro-ui": "^3.0.0-alpha.10",
     "tslib": "^2.2.0"

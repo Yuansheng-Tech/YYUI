@@ -71,7 +71,7 @@ export const YYGoodsGrid = (props: IProps & AtGridProps) => {
       {
         url,
         method: 'GET',
-        body: {}
+        body: {},
       },
       {}
     );
@@ -79,7 +79,7 @@ export const YYGoodsGrid = (props: IProps & AtGridProps) => {
     data = queryData;
     console.log('loading, data: queryData, error', loading, queryData, data, error);
   }
-  console.log('props rootStore', data);
+
   return (
     <View
       className="yy-goods-grid"
@@ -98,89 +98,89 @@ export const YYGoodsGrid = (props: IProps & AtGridProps) => {
       }
     >
       {/* <RootStoreProvider value={rootStore}> */}
-        {data.map((v, k) => {
-          const { url, image, value, price, originalPrice } = v;
-          return (
+      {data.map((v, k) => {
+        const { url, image, value, price, originalPrice } = v;
+        return (
+          <View
+            key={k}
+            onClick={() => {
+              url &&
+                (onClick
+                  ? onClick({
+                      url,
+                    })
+                  : router.navigateTo({
+                      url,
+                    }));
+            }}
+            className={classnames({
+              'yy-goods-item': true,
+              [`yy-goods-${type}-type`]: !!type,
+            })}
+            style={{
+              border: hasBorder ? `1px solid #ddd` : 'none',
+              width: inline
+                ? `calc(${imageWidth} + 10px)`
+                : `calc(${100 / columnNum}% - ${itemMargin} - ${itemMargin})`,
+              float: 'left',
+              borderRadius: borderRadius,
+              padding: itemPadding,
+              margin: itemMargin,
+            }}
+          >
             <View
-              key={k}
-              onClick={() => {
-                url &&
-                  (onClick
-                    ? onClick({
-                        url,
-                      })
-                    : router.navigateTo({
-                        url,
-                      }));
-              }}
-              className={classnames({
-                'yy-goods-item': true,
-                [`yy-goods-${type}-type`]: !!type,
-              })}
+              className="yy-goods-item-left"
               style={{
-                border: hasBorder ? `1px solid #ddd` : 'none',
-                width: inline
-                  ? `calc(${imageWidth} + 10px)`
-                  : `calc(${100 / columnNum}% - ${itemMargin} - ${itemMargin})`,
-                float: 'left',
-                borderRadius: borderRadius,
-                padding: itemPadding,
-                margin: itemMargin,
+                width: type === 'imageLeft' ? imageWidth : 'initial',
               }}
             >
-              <View
-                className="yy-goods-item-left"
-                style={{
-                  width: type === 'imageLeft' ? imageWidth : 'initial',
-                }}
-              >
-                {image && (
-                  <Image
-                    mode={imageMode || 'scaleToFill'}
-                    src={image}
-                    className="yy-goods-item-image"
-                    style={{
-                      width: imageWidth,
-                      height: imageHeight,
-                    }}
-                  />
-                )}
-              </View>
-              <View
-                className="yy-goods-item-desc"
-                style={{
-                  height: type === 'imageLeft' ? imageHeight : 'initial',
-                  width: type === 'imageLeft' ? `calc(100% - ${imageWidth} - 10px)` : 'initial',
-                  marginLeft: type === 'imageLeft' ? '10px' : 'initial',
-                }}
-              >
-                <Text
-                  className="yy-goods-item-title"
+              {image && (
+                <Image
+                  mode={imageMode || 'scaleToFill'}
+                  src={image}
+                  className="yy-goods-item-image"
                   style={{
-                    textAlign: textAlign || 'left',
+                    width: imageWidth,
+                    height: imageHeight,
                   }}
-                >
-                  {value}
-                </Text>
-                {!!price && (
-                  <View className="yy-goods-prices">
-                    <Text className="yy-goods-price">¥{price}</Text>
-                    {!!originalPrice && <Text className="yy-goods-original-price">¥{originalPrice}</Text>}
-                    <Text className="yy-goods-cart">
-                      <Image
-                        src={cartImage}
-                        style={{
-                          width: '16px',
-                          height: '16px',
-                        }}
-                      />
-                    </Text>
-                  </View>
-                )}
-              </View>
+                />
+              )}
             </View>
-          );
-        })}
+            <View
+              className="yy-goods-item-desc"
+              style={{
+                height: type === 'imageLeft' ? imageHeight : 'initial',
+                width: type === 'imageLeft' ? `calc(100% - ${imageWidth} - 10px)` : 'initial',
+                marginLeft: type === 'imageLeft' ? '10px' : 'initial',
+              }}
+            >
+              <Text
+                className="yy-goods-item-title"
+                style={{
+                  textAlign: textAlign || 'left',
+                }}
+              >
+                {value}
+              </Text>
+              {!!price && (
+                <View className="yy-goods-prices">
+                  <Text className="yy-goods-price">¥{price}</Text>
+                  {!!originalPrice && <Text className="yy-goods-original-price">¥{originalPrice}</Text>}
+                  <Text className="yy-goods-cart">
+                    <Image
+                      src={cartImage}
+                      style={{
+                        width: '16px',
+                        height: '16px',
+                      }}
+                    />
+                  </Text>
+                </View>
+              )}
+            </View>
+          </View>
+        );
+      })}
       {/* </RootStoreProvider> */}
     </View>
   );

@@ -10,14 +10,25 @@ export const transformDataSource = (val) => {
 };
 
 export const unTransformDataSource = (val) => {
-  if (Array.isArray(val)) { return val }
+  if (Array.isArray(val)) {
+    return val;
+  }
   // @ts-ignore
   String.prototype.toFunction = function () {
     return eval('(' + this + ')');
   };
-
+  console.log('unTransformDataSource val', val);
   return _mapValues(val, (v) => {
-    return /^function /g.test(v) ? v.toFunction() : v;
+    if (Array.isArray(v)) {
+      return v;
+    }
+    if (typeof v === 'string') {
+      return /^function /g.test(v) ? v.toFunction() : v;
+    }
+    if (typeof v === 'object') {
+      return unTransformDataSource(v);
+    }
+    // return /^function /g.test(v) ? v.toFunction() : v;
   });
 };
 
