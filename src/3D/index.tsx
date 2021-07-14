@@ -4,8 +4,6 @@ import Taro from '@tarojs/taro';
 import { createScopedThreejs } from 'threejs-miniprogram';
 const { renderModel } = require('@ysyp/utils');
 
-import './index.scss';
-
 export class YYThreeGLB extends React.Component {
   data = {};
   canvas;

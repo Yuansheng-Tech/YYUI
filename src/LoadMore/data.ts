@@ -7,4 +7,7 @@ export const loadMoreDataSource: ILoadMoreProps = {
   noMoreText: '～我也是有底线的～',
   moreBtnStyle: '',
   noMoreTextStyle: '',
+  onClick: (data) => {
+    return 'more'
+  }
 }

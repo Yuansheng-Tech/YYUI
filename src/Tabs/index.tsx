@@ -13,8 +13,9 @@ import { TabItem } from 'taro-ui/types/tab-bar';
 /** { title?: string; value?: string; [key: string]: any; } */
 export interface ITabsProps {
   url?: string;
+  current?: number;
   children?: React.ReactNode;
-  tabList?: TabItem[];
+  tabList?: (TabItem & { id: string}) [];
   tabDirection?: 'vertical' | 'horizontal';
   onClick?: (data: any) => void;
 }
