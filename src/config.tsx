@@ -36,6 +36,7 @@ import { h1DataSource, h2DataSource, h3DataSource, pDataSource, infoDataSource, 
 import { transformDataSource } from './renderData';
 // import { iOSCardDataSource } from './IOSCard/data'
 import { shopItemDataSource, shopListDataSource } from './Shop/data';
+import { threeGLBDataSource } from './3D/data';
 
 export interface IComponent {
   // type?: 'children' | 'YYUI'
@@ -285,6 +286,13 @@ export const componentsData = [
         children: [],
       },
       {
+        name: 'YYLoadMoreGoodsGrid',
+        text: '商品栅格（loadmore）',
+        icon: 'http://file.yuansheng.com/static/memo/files/goodGrid.png',
+        data: transformDataSource(goodsGridDataSource),
+        children: [],
+      },
+      {
         name: 'YYShopItem',
         text: '单个店铺',
         icon: '',
@@ -358,6 +366,18 @@ export const componentsData = [
       //   icon: '',
       //   data: transformDataSource(iOSCardDataSource)
       // },
+    ],
+  },
+  {
+    label: '3D/Three.js',
+    components: [
+      {
+        name: 'YYThreeGLB',
+        text: 'Load GLB',
+        icon: '',
+        data: transformDataSource(threeGLBDataSource),
+        children: [],
+      },
     ],
   },
 ];

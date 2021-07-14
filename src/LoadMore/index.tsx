@@ -8,19 +8,17 @@ export interface ILoadMoreProps {
   noMoreText?: string;
   moreBtnStyle?: string;
   noMoreTextStyle?: string;
+  onClick: (event) => 'more' | 'loading' | 'noMore';
 }
 
 export const YYLoadMore = (props: ILoadMoreProps) => {
   const { moreBtnStyle = {} } = props;
   const [status, setStatus] = React.useState('more') as ['more' | 'loading' | 'noMore', (data) => {}];
-  const handleClick = () => {
+  const handleClick = async (e) => {
     // 开始加载
     setStatus('loading');
-    // 模拟异步请求数据
-    // setTimeout(() => {
-    //   // 没有更多了
-    //   setStatus('noMore')
-    // }, 2000)
+    const result = await props.onClick(e);
+    setStatus(result);
   };
   return (
     <AtLoadMore

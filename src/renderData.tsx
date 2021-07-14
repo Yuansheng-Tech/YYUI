@@ -5,6 +5,7 @@ import * as YYUI from './index';
 
 export const transformDataSource = (val) => {
   return _mapValues(val, (v) => {
+    console.log('transformDataSource', typeof v, v);
     return typeof v === 'function' ? v.toString() : v;
   });
 };
@@ -17,12 +18,12 @@ export const unTransformDataSource = (val) => {
   String.prototype.toFunction = function () {
     return eval('(' + this + ')');
   };
-  console.log('unTransformDataSource val', val);
   return _mapValues(val, (v) => {
     if (Array.isArray(v)) {
       return v;
     }
     if (typeof v === 'string') {
+      // @ts-ignore
       return /^function /g.test(v) ? v.toFunction() : v;
     }
     if (typeof v === 'object') {

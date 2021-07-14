@@ -1,52 +1,56 @@
 import { AtGridItem, AtGridProps } from 'taro-ui/types/grid';
-import { IProps } from './index';
+import { IgoodsGridProps } from './index';
 
-export const goodsGridDataSource: IProps & AtGridProps = {
+export const goodsGridDataSource: IgoodsGridProps & AtGridProps = {
   // mode: 'square', // square rect
-  url: '',
+  url: '/goods',
+  skip: 0,
+  take: 10,
   hasBorder: true,
   borderRadius: '0px',
   backgroundColor: '#fff',
   type: 'imageLeft',
   inline: false,
-  columnNum: 2,
+  columnNum: 1,
   imageMode: 'scaleToFill',
-  imageWidth: '60px',
-  imageHeight: '60px',
+  imageWidth: '100px',
+  imageHeight: '100px',
   itemPadding: '5px',
   itemMargin: '5px',
   textAlign: 'left',
   cartImage: '',
   onClick: (item: AtGridItem, index: number) => {
-    console.log('item index', item, index)
+    console.log('item index', item, index);
   },
   data: [
-      {
-        image: 'http://localhost:3333/static/memo/files/hb10.png',
-        value: '领取中心',
-        // iconInfo: '',
-        url: 'https://yuanshengyoupin.com',
-        price: 11.00,
-        originalPrice: 12.00
-      },
-      {
-        image: 'http://localhost:3333/static/memo/files/hb10.png',
-        value: '找折扣',
-        url: 'https://yuanshengyoupin.com',
-        price: 11.00,
-        originalPrice: 12.00
-      },
-      {
-        image: 'http://localhost:3333/static/memo/files/hb10.png',
-        value: '领会员',
-        price: 11.00,
-        originalPrice: 0
-      },
-      {
-        image: 'http://localhost:3333/static/memo/files/hb10.png',
-        value: '新品首发',
-        price: 0,
-        originalPrice: 0
-      }
-    ]
-}
+    {
+      id: 'xxx1',
+      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      name: '领取中心',
+      price_min: 11.0,
+      original_price: 12.0,
+    },
+    {
+      id: 'xxx2',
+      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      name: '找折扣',
+      url: 'https://yuanshengyoupin.com',
+      price_min: 11.0,
+      original_price: 12.0,
+    },
+    {
+      id: 'xxx3',
+      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      name: '领会员',
+      price_min: 11.0,
+      original_price: 0,
+    },
+    {
+      id: 'xxx4',
+      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      name: '新品首发',
+      price_min: 0,
+      original_price: 0,
+    },
+  ],
+};

@@ -15,11 +15,7 @@
     "jsx": "react",
     "incremental": true,
     "rootDir": "./src",
-    "outDir": "./dist",
-    "paths": {
-      "@ysyp/utils": ["../utils/index"],
-      "@ysyp/stores": ["../stores/index"]
-    }
+    "outDir": "./dist"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"],
