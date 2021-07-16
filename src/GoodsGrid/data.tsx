@@ -1,4 +1,5 @@
 import { AtGridItem, AtGridProps } from 'taro-ui/types/grid';
+import { tabsDataSource } from '../Tabs/data';
 import { IgoodsGridProps } from './index';
 
 export const goodsGridDataSource: IgoodsGridProps & AtGridProps = {
@@ -53,4 +54,9 @@ export const goodsGridDataSource: IgoodsGridProps & AtGridProps = {
       original_price: 0,
     },
   ],
+};
+
+export const tabGoodsDataSource = {
+  tabs: tabsDataSource,
+  goods: goodsGridDataSource,
 };

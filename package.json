@@ -32,14 +32,11 @@
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "docs",
-    "style",
-    "babel.js"
+    "dist"
   ],
   "scripts": {
     "start": "tsc -w --preserveWatchOutput",
-    "docs": "typedoc",
+    "docs": "typedoc --out docs src/index.ts",
     "prebuild": "del lib/* dist/* tsconfig.tsbuildinfo",
     "build": "yarn run clean && yarn run build:rollup && yarn run build:lib",
     "build:lib": "tsc --project ./tsconfig.build.json",
@@ -77,12 +74,15 @@
     "@tarojs/taro": "^3.2.9",
     "@types/classnames": "^2.3.1",
     "@ysyp/stores": "^0.1.3",
+    "@ysyp/utils": "^0.3.7",
     "taro-ui": "^3.0.0-alpha.10",
+    "threejs-miniprogram": "0.0.8",
     "tslib": "^2.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@rollup/plugin-json": "^4.1.0",
     "@types/lodash": "^4.14.170",
     "@types/node": "^14.17.0",
     "@types/react": "^16.14.6",
@@ -99,7 +99,7 @@
     "rollup": "^2.52.8",
     "tsccss": "0.0.6",
     "typedoc": "^0.20.36",
-    "typedoc-plugin-markdown": "^3.8.1",
+    "typedoc-plugin-markdown": "^3.10.3",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {

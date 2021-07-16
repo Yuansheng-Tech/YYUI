@@ -1,4 +1,4 @@
-import { ILoadMoreProps } from "./index";
+import { ILoadMoreProps } from './index';
 
 export const loadMoreDataSource: ILoadMoreProps = {
   height: '40px',
@@ -7,7 +7,7 @@ export const loadMoreDataSource: ILoadMoreProps = {
   noMoreText: '～我也是有底线的～',
   moreBtnStyle: '',
   noMoreTextStyle: '',
-  onClick: (data) => {
-    return 'more'
-  }
-}
+  onClick: () => {
+    return 'more';
+  },
+};

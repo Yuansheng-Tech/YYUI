@@ -1,57 +1,45 @@
 import React from 'react';
-import { View } from '@tarojs/components';
 import { AtTabs } from 'taro-ui';
-import { useStore } from 'mobx-store-provider';
-
-import { Query } from '@ysyp/utils';
-import { dataMapKeys } from '@ysyp/utils';
-import { Url as YYURL } from '@ysyp/utils';
-
-import { RootStore } from '../root.store';
 import { TabItem } from 'taro-ui/types/tab-bar';
 
-/** { title?: string; value?: string; [key: string]: any; } */
+import { useRootStore } from '@ysyp/stores';
 export interface ITabsProps {
+  store?: string;
   url?: string;
+  take?: number;
+  skip?: number;
   current?: number;
   children?: React.ReactNode;
-  tabList?: (TabItem & { id: string}) [];
+  tabList?: (TabItem & { id: string; name: string; value: string })[];
   tabDirection?: 'vertical' | 'horizontal';
   onClick?: (data: any) => void;
 }
 
 export const YYTabs = (props: ITabsProps) => {
-  // AtTabsProps &
-  let { tabDirection = 'vertical', tabList = [], url = '' } = props;
-  const [current, setCurrent] = React.useState(0);
-
+  let { tabDirection = 'vertical', tabList = [], store, current: propsCurrent } = props;
+  const [current, setCurrent] = React.useState(propsCurrent || 0);
+  const rootStore = useRootStore();
   return (
-    <View className="yy-tabbar">
-      <Query url={url}>
-        {({ data = [], loading }) => {
-          if (url && data.length && tabList.length) {
-            tabList = dataMapKeys(data, tabList[0]);
-          }
-
-          return (
-            <AtTabs
-              scroll={tabList.length > 3}
-              tabDirection={tabDirection}
-              tabList={loading ? [] : tabList}
-              onClick={(data) => {
-                const rootStore = useStore(RootStore, YYURL.getPageId());
-                console.log('rootStore', rootStore);
-                console.log('props.onClick', props.onClick);
-                setCurrent(data);
-                props.onClick && props.onClick(tabList[data]);
-                console.log('tabList[data]', tabList[data].id);
-                rootStore.setSelectId(tabList[data].id || '');
-              }}
-              current={props.current || current}
-            />
-          );
-        }}
-      </Query>
-    </View>
+    <AtTabs
+      scroll={tabList.length > 3}
+      tabDirection={tabDirection}
+      tabList={tabList.map((v) => ({
+        ...v,
+        value: v.id,
+        title: v.name,
+        key: v.id,
+      }))}
+      onClick={(data) => {
+        /** 当前分类 */
+        if (store && rootStore[store].data.id !== tabList[data].id) {
+          rootStore[store].setPage({
+            skip: 0,
+          });
+          rootStore[store].setData(tabList[data]);
+        }
+        setCurrent(data);
+      }}
+      current={current}
+    />
   );
 };

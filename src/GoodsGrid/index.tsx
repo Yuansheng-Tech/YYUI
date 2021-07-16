@@ -26,7 +26,7 @@ export interface IgoodsGridProps {
   textAlign?: 'start' | 'end' | 'left' | 'right' | 'center' | 'justify' | 'match-parent';
   // price?: number;
   // originalPrice?: number;
-  data: {
+  data?: {
     id: string;
     icon: string;
     name?: string;
@@ -36,7 +36,7 @@ export interface IgoodsGridProps {
     original_price?: number;
   }[];
   cartImage?: string;
-  onClick: (val: AtGridItem, index?: number) => void;
+  onClick?: (val: AtGridItem, index?: number) => void;
 }
 
 export const YYGoodsGrid = (props: IgoodsGridProps) => {

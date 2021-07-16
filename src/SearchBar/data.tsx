@@ -12,12 +12,12 @@ export const searchBarDataSource: AtSearchBarProps = {
   showActionButton: false, // 是否一直显示右侧按钮
   inputType: 'text', // 'text' | 'number' | 'idcard' | 'digit'
   onConfirm: (event) => {
-    console.log('onConfirm event', useRootStore());
+    console.log('onConfirm event', event, useRootStore());
   },
   onActionClick: (event) => {
-    console.log('onConfirm event', useRootStore());
+    console.log('onConfirm event', event, useRootStore());
   },
   onChange: (value: string) => {
-    console.log('onChange value, event', value, event);
+    console.log('onChange value, event', value);
   },
 };

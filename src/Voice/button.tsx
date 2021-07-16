@@ -2,7 +2,7 @@ import React from 'react';
 import Taro from '@tarojs/taro';
 import { Button } from '@tarojs/components';
 
-export const YYVoiceButton = (props) => {
+export const YYVoiceButton = () => {
   return (
     <Button
       onClick={() =>

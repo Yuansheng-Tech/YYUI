@@ -14,6 +14,7 @@ export { YYSwiper } from './Swiper/index';
 export { YYSpaceline } from './SpaceLine/index';
 export { YYTabBar } from './TabBar/index';
 export { YYTabs } from './Tabs/index';
+export { YYLoadTabs } from './Tabs/load';
 export { YYHtml } from './Html/index';
 export { YYImage } from './Image/index';
 export { YYContainer } from './Container/index';
@@ -40,9 +41,8 @@ export { YYImg } from './Article/img';
 export { YYShopItem } from './Shop/item';
 export { YYShopList } from './Shop/list';
 export { YYThreeGLB } from './3D/index';
+export { YYPlayVioce } from './Voice/play';
 
 // others
-export * from './config';
-export * from './renderData';
-export * from './root.store';
-export * from './baseCss';
+export { componentsData } from './componentsData';
+export { renderData, renderDatas, transformDataSource, unTransformDataSource } from './renderData';

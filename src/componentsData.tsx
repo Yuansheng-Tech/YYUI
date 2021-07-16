@@ -187,6 +187,13 @@ export const componentsData = [
         children: [],
       },
       {
+        name: 'YYTabs',
+        text: '标签页',
+        icon: 'http://file.yuansheng.com/static/memo/files/Tabs.png',
+        data: transformDataSource(tabsDataSource),
+        children: [],
+      },
+      {
         name: 'YYGrid',
         text: '栅格布局',
         icon: 'http://file.yuansheng.com/static/memo/files/Grid.png',
@@ -272,7 +279,7 @@ export const componentsData = [
     label: '数据请求',
     components: [
       {
-        name: 'YYTabs',
+        name: 'YYLoadTabs',
         text: '标签页',
         icon: 'http://file.yuansheng.com/static/memo/files/Tabs.png',
         data: transformDataSource(tabsDataSource),
@@ -376,6 +383,18 @@ export const componentsData = [
         text: 'Load GLB',
         icon: '',
         data: transformDataSource(threeGLBDataSource),
+        children: [],
+      },
+    ],
+  },
+  {
+    label: 'Voice',
+    components: [
+      {
+        name: 'YYPlayVioce',
+        text: 'PlayVoice',
+        icon: '',
+        data: transformDataSource({}),
         children: [],
       },
     ],
