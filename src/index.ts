@@ -40,7 +40,6 @@ export { YYInfo } from './Article/info';
 export { YYImg } from './Article/img';
 export { YYShopItem } from './Shop/item';
 export { YYShopList } from './Shop/list';
-export { YYThreeGLB } from './3D/index';
 export { YYPlayVioce } from './Voice/play';
 export { YYTabGoods } from './GoodsGrid/tabs';
 

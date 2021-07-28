@@ -36,7 +36,6 @@ import { h1DataSource, h2DataSource, h3DataSource, pDataSource, infoDataSource, 
 import { transformDataSource } from './renderData';
 // import { iOSCardDataSource } from './IOSCard/data'
 import { shopItemDataSource, shopListDataSource } from './Shop/data';
-import { threeGLBDataSource } from './3D/data';
 
 export interface IComponent {
   // type?: 'children' | 'YYUI'
@@ -382,28 +381,28 @@ export const componentsData = [
       // },
     ],
   },
-  {
-    label: '3D/Three.js',
-    components: [
-      {
-        name: 'YYThreeGLB',
-        text: 'Load GLB',
-        icon: '',
-        data: transformDataSource(threeGLBDataSource),
-        children: [],
-      },
-    ],
-  },
-  {
-    label: 'Voice',
-    components: [
-      {
-        name: 'YYPlayVioce',
-        text: 'PlayVoice',
-        icon: '',
-        data: transformDataSource({}),
-        children: [],
-      },
-    ],
-  },
+  // {
+  //   label: '3D/Three.js',
+  //   components: [
+  //     {
+  //       name: 'YYThreeGLB',
+  //       text: 'Load GLB',
+  //       icon: '',
+  //       data: transformDataSource(threeGLBDataSource),
+  //       children: [],
+  //     },
+  //   ],
+  // },
+  // {
+  //   label: 'Voice',
+  //   components: [
+  //     {
+  //       name: 'YYPlayVioce',
+  //       text: 'PlayVoice',
+  //       icon: '',
+  //       data: transformDataSource({}),
+  //       children: [],
+  //     },
+  //   ],
+  // },
 ];
