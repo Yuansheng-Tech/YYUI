@@ -42,6 +42,7 @@ export { YYShopItem } from './Shop/item';
 export { YYShopList } from './Shop/list';
 export { YYThreeGLB } from './3D/index';
 export { YYPlayVioce } from './Voice/play';
+export { YYTabGoods } from './GoodsGrid/tabs';
 
 // others
 export { componentsData } from './componentsData';

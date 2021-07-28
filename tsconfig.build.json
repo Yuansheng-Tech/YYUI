@@ -19,8 +19,13 @@
     "jsx": "react",
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
-    "rootDir": "./src",
-    "outDir": "./dist"
+    "rootDir": ".",
+    "outDir": "./dist",
+    "paths": {
+      "@ysyp/ui/*": ["../../packages/components/*"],
+      "@ysyp/utils/*": ["../../packages/utils/*"],
+      "@ysyp/stores/*": ["../../packages/stores/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"],

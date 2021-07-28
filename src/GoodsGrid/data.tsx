@@ -4,7 +4,7 @@ import { IgoodsGridProps } from './index';
 
 export const goodsGridDataSource: IgoodsGridProps & AtGridProps = {
   // mode: 'square', // square rect
-  url: '/goods',
+  goodUrl: '/goods',
   skip: 0,
   take: 10,
   hasBorder: true,
@@ -57,6 +57,10 @@ export const goodsGridDataSource: IgoodsGridProps & AtGridProps = {
 };
 
 export const tabGoodsDataSource = {
+  tabDirection: 'vertical',
+  flexDirection: 'row',
+  tabUrl: '/classifies',
   tabs: tabsDataSource,
+  goodUrl: '/goods',
   goods: goodsGridDataSource,
 };

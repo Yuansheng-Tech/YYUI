@@ -16,7 +16,7 @@ interface IState {
 }
 
 export default class CartAdd extends Component<IAddProps, IState> {
-  constructor(props) {
+  constructor(props: IAddProps | Readonly<IAddProps>) {
     super(props);
     this.state = {
       priceValue: this.props.valueNum ? this.props.valueNum : 1,

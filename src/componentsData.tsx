@@ -5,7 +5,7 @@ import { searchBarDataSource } from './SearchBar/data';
 import { swiperDataSource } from './Swiper/data';
 import { videoDataSource } from './Video/data';
 import { gridDataSource } from './Grid/data';
-import { goodsGridDataSource } from './GoodsGrid/data';
+import { goodsGridDataSource, tabGoodsDataSource } from './GoodsGrid/data';
 import { goodsThreeDataSource } from './GoodsThree/data';
 import { couponDataSource } from './Coupon/data';
 import { textareaDataSource } from './Textarea/data';
@@ -311,6 +311,13 @@ export const componentsData = [
         text: '店铺列表',
         icon: '',
         data: transformDataSource(shopListDataSource),
+        children: [],
+      },
+      {
+        name: 'YYTabGoods',
+        text: '分类商品',
+        icom: '',
+        data: transformDataSource(tabGoodsDataSource),
         children: [],
       },
       {

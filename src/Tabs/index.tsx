@@ -5,7 +5,7 @@ import { TabItem } from 'taro-ui/types/tab-bar';
 import { useRootStore } from '@ysyp/stores';
 export interface ITabsProps {
   store?: string;
-  url?: string;
+  tabUrl?: string;
   take?: number;
   skip?: number;
   current?: number;

@@ -2,9 +2,12 @@ import React from 'react';
 import { Block, Canvas } from '@tarojs/components';
 import Taro, { useReady } from '@tarojs/taro';
 import { createScopedThreejs } from 'threejs-miniprogram';
-import { renderModel } from '@ysyp/utils';
+// import { renderModel } from '@ysyp/utils';
+interface IYYThreeGLBProps {
+  url: string;
+}
 
-export const YYThreeGLB = () => {
+export const YYThreeGLB = (props: IYYThreeGLBProps) => {
   // let data = {}
   let canvas;
   useReady(() => {
@@ -17,7 +20,7 @@ export const YYThreeGLB = () => {
       // renderSphere(canvas, THREE)
       // renderCube(canvas, THREE)
       // renderCubes(canvas, THREE)
-      renderModel(canvas, THREE);
+      // renderModel(canvas, THREE, props.url);
     });
   });
   return (

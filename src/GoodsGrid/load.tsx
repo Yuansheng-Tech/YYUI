@@ -6,11 +6,11 @@ import { fetcher } from '@ysyp/utils';
 import { useRootStore } from '@ysyp/stores';
 
 export const YYLoadGoodsGrid = (props: IgoodsGridProps) => {
-  const { url, skip, take } = props;
+  const { goodUrl = '', skip = 0, take = 10 } = props;
   const { goodStore, classifyStore } = useRootStore();
-  if (url) {
+  if (goodUrl) {
     const { data } = useSWR(
-      `${url}?${qs.stringify(
+      `${goodUrl}?${qs.stringify(
         Object.assign(
           {
             take,
@@ -29,10 +29,6 @@ export const YYLoadGoodsGrid = (props: IgoodsGridProps) => {
     );
     const { data: queryData = [] } = data || {};
     goodStore.setDatas(queryData);
-    goodStore.setPage({
-      take,
-      skip: Number(skip) + Number(take),
-    });
   }
   return <YYGoodsGrid {...props} data={goodStore.datas} />;
 };

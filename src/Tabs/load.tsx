@@ -7,11 +7,12 @@ import { fetcher } from '@ysyp/utils';
 import { ITabsProps, YYTabs } from '.';
 
 export const YYLoadTabs = (props: ITabsProps) => {
-  const { url = '', skip, take, store } = props;
+  console.log('YYLoadTabs props', props);
+  const { tabUrl = '', skip = 0, take = 10, store } = props;
   let { tabList } = props;
-  if (url) {
+  if (tabUrl) {
     const rootStore = useRootStore();
-    const { data } = useSWR(`${url}?take=${take}&skip=${skip}`, (url) => fetcher(url));
+    const { data } = useSWR(`${tabUrl}?take=${take}&skip=${skip}`, (tabUrl) => fetcher(tabUrl));
     const { data: queryData = [] } = data || {};
     if (store) {
       rootStore[store].setDatas(queryData);

@@ -3,18 +3,30 @@ import { IgoodsGridProps } from './index';
 import { View } from '@tarojs/components';
 import { ITabsProps } from '../Tabs/index';
 import { YYLoadTabs } from '../Tabs/load';
-import { YYLoadGoodsGrid } from './load';
+import { YYLoadMoreGoodsGrid } from './more';
+
+import './index.scss';
 
 export interface ITabGoodsProps {
+  tabDirection: 'vertical' | 'horizontal';
+  flexDirection: 'row' | 'column';
   tabs: ITabsProps;
+  tabUrl: string;
   goods: IgoodsGridProps;
+  goodUrl: string;
 }
 
-export const TabGoods = (props: ITabGoodsProps) => {
+export const YYTabGoods = (props: ITabGoodsProps) => {
+  const { tabDirection, flexDirection, tabUrl, goodUrl } = props;
   return (
-    <View className="yy-tab-goods">
-      <YYLoadTabs {...props.tabs} />
-      <YYLoadGoodsGrid {...props.goods} />
+    <View
+      className="yy-tab-goods"
+      style={{
+        flexDirection,
+      }}
+    >
+      <YYLoadTabs {...props.tabs} tabDirection={tabDirection} tabUrl={tabUrl} />
+      <YYLoadMoreGoodsGrid {...props.goods} goodUrl={goodUrl} />
     </View>
   );
 };
