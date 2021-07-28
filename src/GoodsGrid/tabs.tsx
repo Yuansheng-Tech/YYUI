@@ -5,8 +5,6 @@ import { ITabsProps } from '../Tabs/index';
 import { YYLoadTabs } from '../Tabs/load';
 import { YYLoadMoreGoodsGrid } from './more';
 
-import './index.scss';
-
 export interface ITabGoodsProps {
   tabDirection: 'vertical' | 'horizontal';
   flexDirection: 'row' | 'column';

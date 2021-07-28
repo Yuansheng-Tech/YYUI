@@ -3,7 +3,7 @@ import { ITabsProps } from './index';
 
 export const tabsDataSource: ITabsProps & AtTabsProps = {
   store: 'classifyStore',
-  url: '/classifies',
+  tabUrl: '/classifies',
   take: 10,
   skip: 0,
   current: 0,
