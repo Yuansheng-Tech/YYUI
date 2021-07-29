@@ -1,6 +1,6 @@
 {
   "name": "@ysyp/ui",
-  "version": "0.1.6",
+  "version": "0.1.5",
   "description": "Taro UI for e-commerce system.",
   "keywords": [
     "taro",
@@ -70,11 +70,11 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@tarojs/components": "^3.2.9",
-    "@tarojs/taro": "^3.2.9",
+    "@tarojs/components": "^3.3.1",
+    "@tarojs/taro": "^3.3.1",
     "@types/classnames": "^2.3.1",
-    "@ysyp/stores": "latest",
-    "@ysyp/utils": "latest",
+    "@ysyp/stores": "^0.2.2",
+    "@ysyp/utils": "^0.3.9",
     "taro-ui": "^3.0.0-alpha.10",
     "threejs-miniprogram": "0.0.8",
     "tslib": "^2.2.0"

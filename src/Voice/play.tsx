@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Button } from '@tarojs/components';
-import { openVoice as Voice } from '@ysyp/utils/dist/W-baiduyy';
+import { openVoice as Voice } from '@ysyp/utils';
 
 export const YYPlayVioce = () => {
   const openVoice = () => {

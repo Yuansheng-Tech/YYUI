@@ -236,7 +236,7 @@
   dependencies:
     "@tarojs/runtime" "3.2.15"
 
-"@tarojs/components@^3.2.9":
+"@tarojs/components@^3.3.1":
   version "3.2.15"
   resolved "https://registry.nlark.com/@tarojs/components/download/@tarojs/components-3.2.15.tgz?cache=0&sync_timestamp=1625644333940&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Fcomponents%2Fdownload%2F%40tarojs%2Fcomponents-3.2.15.tgz#63ccdd833811c9de02025a06e4ea2a5f13c6950e"
   integrity sha1-Y8zdgzgRyd4CAloG5OoqXxPGlQ4=
@@ -289,7 +289,7 @@
     raf "^3.4.1"
     whatwg-fetch "^3.4.0"
 
-"@tarojs/taro@3.2.15", "@tarojs/taro@^3.2.9":
+"@tarojs/taro@3.2.15", "@tarojs/taro@^3.3.1":
   version "3.2.15"
   resolved "https://registry.nlark.com/@tarojs/taro/download/@tarojs/taro-3.2.15.tgz#c6072c46edd0e247fc956fa33194e838a056402a"
   integrity sha1-xgcsRu3Q4kf8lW+jMZToOKBWQCo=

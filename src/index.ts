@@ -44,5 +44,5 @@ export { YYPlayVioce } from './Voice/play';
 export { YYTabGoods } from './GoodsGrid/tabs';
 
 // others
-export { componentsData } from './componentsData';
-export { renderData, renderDatas, transformDataSource, unTransformDataSource } from './renderData';
+// export { componentsData } from './componentsData';
+// export { renderData, renderDatas, transformDataSource, unTransformDataSource } from './renderData';
