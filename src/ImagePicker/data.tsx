@@ -8,14 +8,16 @@ export const imagePickerDataSource: IImagePickerProps & AtImagePickerProps = {
   showAddBtn: true,
   count: 1,
   // sizeType: 100,
-  files: [{
-    url: 'http://localhost:3333/static/memo/files/hb10.png',
-  },
-  {
-    url: 'http://localhost:3333/static/memo/files/hb10.png',
-  },
-  {
-    url: 'http://localhost:3333/static/memo/files/hb10.png',
-  }],
+  files: [
+    {
+      url: 'http://localhost:3333/static/memo/files/hb10.png',
+    },
+    {
+      url: 'http://localhost:3333/static/memo/files/hb10.png',
+    },
+    {
+      url: 'http://localhost:3333/static/memo/files/hb10.png',
+    },
+  ],
   onChange: () => {},
-}
+};

@@ -6,34 +6,36 @@ import { YYMap } from '../Map';
 
 export interface IShopList {
   backgroundColor: string;
-  data: IShopItem[]
+  data: IShopItem[];
 }
 
 export const YYShopList = (props: IShopList) => {
   const selectShop = Taro.getStorageSync('selectShop');
   const { data, backgroundColor } = props;
-  return (<View
+  return (
+    <View
       className={'yy-shop-list'}
       style={{
-        backgroundColor
+        backgroundColor,
       }}
     >
-    {selectShop && <YYMap
-      id={selectShop.id}
-      name={selectShop.name}
-      latitude={selectShop.latitude}
-      longitude={selectShop.longitude}
-      scale={12}
-      style={`width: 100%; height: 312rpx;`}
-      />}
-    <ScrollView className='shop-scroll' scrollY>
-      <View className='shop-list'>
-      {
-        data.map((v, k) => {
-          return (<YYShopItem item={v} key={k} index={k} />)
-        })
-      }
-      </View>
-    </ScrollView>
-  </View>);
+      {selectShop && (
+        <YYMap
+          id={selectShop.id}
+          name={selectShop.name}
+          latitude={selectShop.latitude}
+          longitude={selectShop.longitude}
+          scale={12}
+          style={`width: 100%; height: 312rpx;`}
+        />
+      )}
+      <ScrollView className="shop-scroll" scrollY>
+        <View className="shop-list">
+          {data.map((v, k) => {
+            return <YYShopItem item={v} key={k} index={k} />;
+          })}
+        </View>
+      </ScrollView>
+    </View>
+  );
 };

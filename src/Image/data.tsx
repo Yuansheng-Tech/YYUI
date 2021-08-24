@@ -5,5 +5,5 @@ export const imageDataSource: IImageProps = {
   mode: 'widthFix',
   width: '100%',
   height: '100px',
-  borderRadius: '10px'
-}
+  borderRadius: '10px',
+};

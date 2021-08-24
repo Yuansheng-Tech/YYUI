@@ -1,9 +1,9 @@
-import { IContainerProps } from "./index";
+import { IContainerProps } from './index';
 
 export const containerDataSource: IContainerProps = {
-  display:  'flex',
+  display: 'flex',
   height: '100%',
   width: '100%',
   flexDirection: 'column',
-  children: null
-}
+  children: null,
+};

@@ -9,16 +9,22 @@ export interface IButtonProps {
 
 export const YYButton = (props: IButtonProps & ButtonProps) => {
   const { title, margin = '0px', borderRadius = '0px', ...btnProps } = props;
-  return (<View 
-    style={{
-      margin: margin,
-    }}
-    className="yy-button">
+  return (
+    <View
+      style={{
+        margin: margin,
+      }}
+      className="yy-button"
+    >
       <Button
         className="yy-button-btn"
         style={{
           borderRadius: borderRadius,
         }}
-        {...btnProps}>{title}</Button>
-      </View>);
-}
+        {...btnProps}
+      >
+        {title}
+      </Button>
+    </View>
+  );
+};

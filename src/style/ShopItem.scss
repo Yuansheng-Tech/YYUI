@@ -18,20 +18,19 @@
     flex-direction: column;
 
     .shop-item-name {
-        flex: 1;
-
+      flex: 1;
     }
     .shop-item-address {
-        flex: 1;
-        font-size: 0.8 * $baseSize;
-        color: gray;
-        margin-top: 10px;
+      flex: 1;
+      font-size: 0.8 * $baseSize;
+      color: gray;
+      margin-top: 10px;
     }
     .shop-item-time {
-        flex: 1;
-        font-size: 0.8 * $baseSize;
-        color: gray;
-        margin-top: 10px;
+      flex: 1;
+      font-size: 0.8 * $baseSize;
+      color: gray;
+      margin-top: 10px;
     }
   }
   .shop-item-right {
@@ -42,11 +41,11 @@
     justify-items: center;
     align-items: center;
     .shop-item-choose {
-        flex: 1;
+      flex: 1;
     }
     .shop-item-distance {
-        font-size: 0.7 * $baseSize;
-        flex: 1;
+      font-size: 0.7 * $baseSize;
+      flex: 1;
     }
   }
 }

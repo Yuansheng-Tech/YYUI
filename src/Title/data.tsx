@@ -1,4 +1,4 @@
-import { ITitleProps } from "./index";
+import { ITitleProps } from './index';
 
 export const titleDataSource: ITitleProps = {
   title: '主标题',
@@ -7,5 +7,5 @@ export const titleDataSource: ITitleProps = {
   url: 'https://yuanshengyoupin.com',
   fontSize: '14px',
   padding: '10px',
-  onClick: () => {}
-}
+  onClick: () => {},
+};

@@ -4,5 +4,5 @@ export const loginAvatarDataSource: ILoginAvatarProps = {
   title: '立即登录',
   image: '',
   backgroundColor: 'red',
-  color: '#FFFFFF'
-}
+  color: '#FFFFFF',
+};

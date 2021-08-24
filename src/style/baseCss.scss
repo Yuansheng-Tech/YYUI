@@ -36,11 +36,11 @@ $baseSize: 16px;
   appearance: none;
 }
 
-input,
-textarea {
-  @include appearance-none;
-  display: block;
-}
+// input,
+// textarea {
+//   @include appearance-none;
+//   display: block;
+// }
 
 @mixin text-overflow() {
   overflow: hidden;

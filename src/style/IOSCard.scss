@@ -3,7 +3,8 @@
   position: relative;
   border-radius: var(--f7-card-border-radius);
   font-size: var(--f7-card-font-size);
-  margin: var(--f7-card-margin-vertical) calc(var(--f7-card-margin-horizontal) + var(--f7-safe-area-right)) var(--f7-card-margin-vertical) calc(var(--f7-card-margin-horizontal) + var(--f7-safe-area-left));
+  margin: var(--f7-card-margin-vertical) calc(var(--f7-card-margin-horizontal) + var(--f7-safe-area-right))
+    var(--f7-card-margin-vertical) calc(var(--f7-card-margin-horizontal) + var(--f7-safe-area-left));
   box-shadow: var(--f7-card-box-shadow);
 }
 
@@ -13,11 +14,14 @@
   background: var(--f7-card-expandable-bg-color);
   position: relative;
   transform-origin: center center;
-  transition-property: transform,border-radius;
+  transition-property: transform, border-radius;
   border-radius: var(--f7-card-expandable-border-radius);
   z-index: 2;
-  transition-duration: .2s;
-  margin: var(--f7-card-expandable-margin-vertical) calc(var(--f7-card-expandable-margin-horizontal) + var(--f7-safe-area-right)) var(--f7-card-expandable-margin-vertical) calc(var(--f7-card-expandable-margin-horizontal) + var(--f7-safe-area-left));
+  transition-duration: 0.2s;
+  margin: var(--f7-card-expandable-margin-vertical)
+    calc(var(--f7-card-expandable-margin-horizontal) + var(--f7-safe-area-right))
+    var(--f7-card-expandable-margin-vertical)
+    calc(var(--f7-card-expandable-margin-horizontal) + var(--f7-safe-area-left));
   box-shadow: var(--f7-card-expandable-box-shadow);
   font-size: var(--f7-card-expandable-font-size);
 }
@@ -71,8 +75,9 @@
   pointer-events: none;
 }
 
-.card-expandable .card-opened-fade-in, .card-expandable .card-opened-fade-out {
-  transition-duration: .4s;
+.card-expandable .card-opened-fade-in,
+.card-expandable .card-opened-fade-out {
+  transition-duration: 0.4s;
 }
 
 .appstore-card-close-button {
@@ -87,7 +92,7 @@
 }
 
 .appstore-card-content {
-  color: rgba(0,0,0,.55);
+  color: rgba(0, 0, 0, 0.55);
   font-weight: 500;
 }
 .card-content-padding {
@@ -95,7 +100,7 @@
   padding: var(--f7-card-content-padding-vertical) var(--f7-card-content-padding-horizontal);
 }
 
-.card-content-padding>p:first-child {
+.card-content-padding > p:first-child {
   margin-top: 0;
 }
 
@@ -103,7 +108,7 @@ p {
   margin: 1em 0;
 }
 
-.appstore-card-header>Image {
+.appstore-card-header > Image {
   position: absolute;
   left: 0;
   top: 0;
@@ -113,7 +118,7 @@ p {
   object-position: center;
   z-index: -1;
   background-color: #ccc;
-  transform: translateX(calc(-1*var(--card-offset)/2));
+  transform: translateX(calc(-1 * var(--card-offset) / 2));
 }
 
 .appstore-card-header-text {
@@ -134,24 +139,20 @@ p {
   color: #fff;
   position: relative;
   z-index: 10;
-  --f7-list-item-text-text-color: hsla(0,0%,100%,0.55);
+  --f7-list-item-text-text-color: hsla(0, 0%, 100%, 0.55);
   --f7-list-item-padding-vertical: 0px;
 }
 
 .appstore-card-subtitle {
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 600;
-    opacity: .55;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.55;
 }
 
 .appstore-card-title {
   font-size: 28px;
   font-weight: 700;
-  max-width: calc(var(--card-width)*0.8);
+  max-width: calc(var(--card-width) * 0.8);
   line-height: 1.2;
 }
-
-
-
-

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Image, Text } from '@tarojs/components';
 export interface ILocationSwitchProps {
   margin?: string;
@@ -22,10 +22,12 @@ export interface ILocationSwitchProps {
     name: string;
     value: string;
     url: string;
+    isChecked: boolean;
   }[];
 }
 
 export const YYLocationSwitch = (props: ILocationSwitchProps) => {
+  console.log('YYLocationSwitch props', props);
   const {
     margin = '0px',
     borderRadius = '0px',
@@ -38,16 +40,16 @@ export const YYLocationSwitch = (props: ILocationSwitchProps) => {
         name: '自取',
         value: 'self_pick',
         url: '',
+        isChecked: true,
       },
       {
         name: '外卖',
         value: 'take_out',
         url: '',
+        isChecked: false,
       },
     ],
   } = props;
-
-  const [checkedKey, setCheckedKey] = React.useState(switchLists[0]);
 
   return (
     <View
@@ -88,8 +90,8 @@ export const YYLocationSwitch = (props: ILocationSwitchProps) => {
           <View className="yy-location-switch">
             {switchLists.map((item, index) => (
               <View
-                onClick={() => setCheckedKey(item)}
-                className={`yy-switch_item ${checkedKey.value === item.value ? 'yy-switch_checked' : ''}`}
+                // onClick={() => setCheckedKey(item)}
+                className={`yy-switch_item ${item.isChecked ? 'yy-switch_checked' : ''}`}
                 key={index}
               >
                 {item.name}

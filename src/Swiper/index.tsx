@@ -13,7 +13,8 @@ export interface IProps {
 }
 
 export const YYSwiper = (props: IProps & SwiperProps) => {
-  const { vertical, items = [] } = props;
+  console.log('YYSwiper props', props);
+  const { vertical, items = [], ...others } = props;
   return (
     <Swiper
       indicatorColor="#999"
@@ -21,7 +22,7 @@ export const YYSwiper = (props: IProps & SwiperProps) => {
       circular
       indicatorDots
       autoplay
-      {...props}
+      {...others}
       vertical={vertical}
     >
       {items.map((val, key) => {

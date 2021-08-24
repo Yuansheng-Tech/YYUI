@@ -1,4 +1,4 @@
-import { ITitlelineProps } from "./index";
+import { ITitlelineProps } from './index';
 
 export const titlelineDataSource: ITitlelineProps = {
   content: '标题',
@@ -8,4 +8,4 @@ export const titlelineDataSource: ITitlelineProps = {
   height: '35px',
   // bgColor: '#fff',
   // icon: <AtIcon value='check-circle'></AtIcon>
-}
+};

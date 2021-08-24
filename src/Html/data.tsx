@@ -5,5 +5,5 @@ export const htmlPageDataSource: IHtmlProps = {
   url: 'https://api.yuanshengyoupin.com',
   text: '<span>aaaa</span>',
   height: '300px',
-  fullScreen: false
-}
+  fullScreen: false,
+};

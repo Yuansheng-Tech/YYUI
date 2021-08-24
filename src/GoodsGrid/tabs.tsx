@@ -15,6 +15,7 @@ export interface ITabGoodsProps {
 }
 
 export const YYTabGoods = (props: ITabGoodsProps) => {
+  console.log('YYTabGoods props', props);
   const { tabDirection, flexDirection, tabUrl, goodUrl } = props;
   return (
     <View

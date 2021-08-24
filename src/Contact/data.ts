@@ -1,4 +1,4 @@
-import { IContactProps } from "./index";
+import { IContactProps } from './index';
 
 export const contactDataSource: IContactProps = {
   logo: 'https://file.biji77.com/wechat/icon/logo_index.png',
@@ -7,5 +7,5 @@ export const contactDataSource: IContactProps = {
   telImage: 'https://file.biji77.com/wechat/icon/tel.png',
   wxImage: 'https://file.biji77.com/files/wx_share.png',
   margin: '10px',
-  borderRadius: '10px'
-}
+  borderRadius: '10px',
+};

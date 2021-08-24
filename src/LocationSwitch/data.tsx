@@ -17,13 +17,18 @@ export const locationSwitchDataSource: ILocationSwitchProps = {
     phone: '17610340225',
   },
   buttonHide: false,
-  switchLists: [{
-    name: '自取',
-    value: 'self_pick',
-    url: ''
-  }, {
-    name: '外卖',
-    value: 'take_out',
-    url: ''
-  }]
-}
+  switchLists: [
+    {
+      name: '自取',
+      value: 'self_pick',
+      url: '',
+      isChecked: false,
+    },
+    {
+      name: '外卖',
+      value: 'take_out',
+      url: '',
+      isChecked: true,
+    },
+  ],
+};

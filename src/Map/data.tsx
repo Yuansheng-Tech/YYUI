@@ -1,4 +1,4 @@
-import { IMapProps } from "./index";
+import { IMapProps } from './index';
 
 export const mapDataSource: IMapProps = {
   id: 1,
@@ -8,5 +8,5 @@ export const mapDataSource: IMapProps = {
   markerImage: '',
   locationImage: '',
   scale: 10,
-  style: ''
-}
+  style: '',
+};

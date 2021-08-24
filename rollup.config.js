@@ -15,7 +15,7 @@ const externalPackages = [
   '@tarojs/runtime',
   '@tarojs/taro',
   '@tarojs/react',
-  'taro-ui'
+  'taro-ui',
 ];
 
 export default {

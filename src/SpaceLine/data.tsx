@@ -1,4 +1,4 @@
-import { ISpacelineProps } from "./index";
+import { ISpacelineProps } from './index';
 
 export const spacelineDataSource: ISpacelineProps = {
   content: '',
@@ -6,5 +6,5 @@ export const spacelineDataSource: ISpacelineProps = {
   fontSize: '16px',
   height: '10px',
   backgroundColor: 'transparent',
-  textAlign: 'center'
-}
+  textAlign: 'center',
+};

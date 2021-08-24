@@ -44,6 +44,19 @@ export const renderData = (props) => {
   );
 };
 
+export const renderRichData = (props) => {
+  const { name = 'YYHtml', data } = props;
+  return React.createElement(
+    YYUI[name],
+    {
+      type: 'text',
+      nodes: data,
+    },
+    null
+  );
+  // <RichText nodes={data} />
+};
+
 export const renderDatas = (props) => {
   const { name, data = {} } = props;
   if (!name) {
