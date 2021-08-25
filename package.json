@@ -42,6 +42,7 @@
     "build:lib": "tsc --project ./tsconfig.build.json",
     "build:rollup": "rollup --config ./rollup.config.js",
     "clean": "rimraf .temp dist lib coverage",
+    "test": "",
     "release": "np"
   },
   "husky": {
