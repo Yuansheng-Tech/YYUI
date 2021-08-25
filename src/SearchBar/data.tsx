@@ -1,5 +1,6 @@
 import { AtSearchBarProps } from 'taro-ui/types/search-bar';
-import { useRootStore } from '@ysyp/stores';
+import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { useContext, createContext } from 'react';
 
 export const searchBarDataSource: AtSearchBarProps = {
   placeholder: '', // 输入框占位符
@@ -12,10 +13,10 @@ export const searchBarDataSource: AtSearchBarProps = {
   showActionButton: false, // 是否一直显示右侧按钮
   inputType: 'text', // 'text' | 'number' | 'idcard' | 'digit'
   onConfirm: (event) => {
-    console.log('onConfirm event', event, useRootStore());
+    console.log('onConfirm event', event, useContext(createContext(new RootStore())));
   },
   onActionClick: (event) => {
-    console.log('onConfirm event', event, useRootStore());
+    console.log('onConfirm event', event, useContext(createContext(new RootStore())));
   },
   onChange: (value: string) => {
     console.log('onChange value, event', value);
