@@ -4,11 +4,10 @@ import useSWR from 'swr';
 import * as qs from 'qs';
 import { fetcher } from '@ysyp/utils';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
-import { observer } from 'mobx-react-lite';
 
-export const YYLoadGoodsGrid = observer((props: IgoodsGridProps) => {
+export const YYLoadGoodsGrid = (props: IgoodsGridProps) => {
   const { goodUrl = '', skip = 0, take = 10 } = props;
-  const { goodStore, classifyStore } = useContext(createContext(new RootStore()));;
+  const { goodStore, classifyStore } = useContext(createContext(new RootStore()));
   if (goodUrl) {
     const { data } = useSWR(
       `${goodUrl}?${qs.stringify(
@@ -32,4 +31,4 @@ export const YYLoadGoodsGrid = observer((props: IgoodsGridProps) => {
     goodStore.setDatas(queryData);
   }
   return <YYGoodsGrid {...props} data={goodStore.datas} />;
-});
+};
