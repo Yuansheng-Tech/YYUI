@@ -1,5 +1,5 @@
 import { AtSearchBarProps } from 'taro-ui/types/search-bar';
-import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { RootStore } from '@ysyp/stores/src/RootStore';
 import { useContext, createContext } from 'react';
 
 export const searchBarDataSource: AtSearchBarProps = {

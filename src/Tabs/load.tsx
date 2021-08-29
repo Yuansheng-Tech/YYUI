@@ -1,8 +1,8 @@
 import React, { createContext, useContext } from 'react';
 import { View } from '@tarojs/components';
 import useSWR from 'swr';
-import { RootStore } from '@ysyp/stores/dist/RootStore';
-import { fetcher } from '@ysyp/utils';
+import { RootStore } from '@ysyp/stores/src/RootStore';
+import { fetcher } from '@ysyp/utils/src/fetcher';
 import { ITabsProps, YYTabs } from '.';
 
 export const YYLoadTabs = (props: ITabsProps) => {

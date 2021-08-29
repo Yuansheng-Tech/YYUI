@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperItem, Image } from '@tarojs/components';
 import { SwiperProps } from '@tarojs/components/types/Swiper';
-import { router } from '@ysyp/utils';
+import { router } from '@ysyp/utils/src/router';
 
 export interface IProps {
   vertical: boolean;

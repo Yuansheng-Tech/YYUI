@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import { AtTabs } from 'taro-ui';
 import { TabItem } from 'taro-ui/types/tab-bar';
-import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { RootStore } from '@ysyp/stores/src/RootStore';
 export interface ITabsProps {
   store?: string;
   tabUrl?: string;

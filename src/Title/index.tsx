@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from '@tarojs/components';
-import { router } from '@ysyp/utils';
+import { router } from '@ysyp/utils/src/router';
 
 // import { Title } from '@tarojs/components'
 // http://www.fhdq.net/bd/94.html

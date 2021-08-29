@@ -1,6 +1,6 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { View } from '@tarojs/components';
-import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { RootStore } from '@ysyp/stores/src/RootStore';
 import { YYLoadMore } from '../LoadMore';
 import { IgoodsGridProps } from './index';
 import { YYLoadGoodsGrid } from './load';
@@ -8,7 +8,7 @@ import { YYLoadGoodsGrid } from './load';
 export const YYLoadMoreGoodsGrid = (props: IgoodsGridProps) => {
   const { skip = 0, take = 10 } = props;
   const { goodStore } = useContext(createContext(new RootStore()));
-  const [skipData, setSkipData] = React.useState(skip || 0);
+  const [skipData, setSkipData] = useState(skip || 0);
   return (
     <View className="yy-goods-load-more-grid">
       <YYLoadGoodsGrid {...props} skip={skipData} />
