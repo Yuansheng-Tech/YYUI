@@ -17,6 +17,22 @@ export interface ITitleProps {
 }
 
 export const YYTitle = (props: ITitleProps) => {
+  const { title, fontSize = '12px', padding = '10px', onClick } = props;
+  return (
+    <View
+      className="yy-title"
+      style={{
+        fontSize,
+        padding,
+      }}
+      onClick={onClick}
+    >
+      <Text className="yy-title-text">{title}</Text>
+    </View>
+  );
+};
+
+export const YYSubTitle = (props: ITitleProps) => {
   const { title, subTitle, more, url, fontSize = '12px', padding = '10px', onClick } = props;
   return (
     <View

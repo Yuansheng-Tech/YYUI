@@ -2,7 +2,7 @@
 
 [![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][npm-version-url] [![License][license-image]][license-url]
 
-一款基于 `Taro` 框架开发的电商 UI 组件库
+一款基于 `Taro` 框架开发的电商可编辑 UI 组件库
 
 > YYUI 可能会出现较大改动并且不保证功能完整可用，请谨慎使用。
 

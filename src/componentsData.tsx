@@ -1,9 +1,10 @@
 import _ from 'lodash';
 
-import { titleDataSource } from './Title/data';
+import { subTitleDataSource, titleDataSource } from './Title/data';
 import { searchBarDataSource } from './SearchBar/data';
 import { swiperDataSource } from './Swiper/data';
 import { videoDataSource } from './Video/data';
+import { audioDataSource } from './Audio/data';
 import { gridDataSource } from './Grid/data';
 import { goodsGridDataSource, tabGoodsDataSource } from './GoodsGrid/data';
 import { goodsThreeDataSource } from './GoodsThree/data';
@@ -104,6 +105,13 @@ export const componentsData = [
         children: [],
       },
       {
+        name: 'YYSubTitle',
+        text: '标题&副标题',
+        icon: 'http://localhost:3333/static/memo/files/titleSub.png',
+        data: transformDataSource(subTitleDataSource),
+        children: [],
+      },
+      {
         name: 'YYTitleline',
         text: '标题线',
         icon: '',
@@ -157,6 +165,13 @@ export const componentsData = [
         text: '视频',
         icon: '',
         data: transformDataSource(videoDataSource),
+        children: [],
+      },
+      {
+        name: 'YYAudio',
+        text: '音频',
+        icon: '',
+        data: transformDataSource(audioDataSource),
         children: [],
       },
       {
