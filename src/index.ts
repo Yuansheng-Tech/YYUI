@@ -43,6 +43,7 @@ export { YYShopItem } from './Shop/item';
 export { YYShopList } from './Shop/list';
 export { YYPlayVioce } from './Voice/play';
 export { YYTabGoods } from './GoodsGrid/tabs';
+export { YYWeChatLogin } from './WeChat/login';
 
 // others
 // export { componentsData } from './componentsData';

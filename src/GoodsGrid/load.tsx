@@ -2,8 +2,8 @@ import React, { createContext, useContext } from 'react';
 import { IgoodsGridProps, YYGoodsGrid } from './index';
 import useSWR from 'swr';
 import * as qs from 'qs';
-import { fetcher } from '@ysyp/utils/src/fetcher';
-import { RootStore } from '@ysyp/stores/src/RootStore';
+import { fetcher } from '@ysyp/utils/dist/fetcher';
+import { RootStore } from '@ysyp/stores/dist/RootStore';
 
 export const YYLoadGoodsGrid = (props: IgoodsGridProps) => {
   const { goodUrl = '', skip = 0, take = 10 } = props;

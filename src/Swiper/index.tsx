@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperItem, Image } from '@tarojs/components';
 import { SwiperProps } from '@tarojs/components/types/Swiper';
-import { router } from '@ysyp/utils/src/router';
+import { router } from '@ysyp/utils/dist/router';
 
 export interface IProps {
   vertical: boolean;
@@ -13,8 +13,8 @@ export interface IProps {
 }
 
 export const YYSwiper = (props: IProps & SwiperProps) => {
-  console.log('YYSwiper props', props);
-  const { vertical, items = [], ...others } = props;
+  let { vertical, items = [], ...others } = props;
+  // items = (typeof items === 'string' && /^(\[|\})/g.test(items)) ? JSON.parse(items) : items;
   return (
     <Swiper
       indicatorColor="#999"

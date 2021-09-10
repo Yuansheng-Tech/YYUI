@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 import { subTitleDataSource, titleDataSource } from './Title/data';
 import { searchBarDataSource } from './SearchBar/data';
 import { swiperDataSource } from './Swiper/data';
@@ -37,6 +35,7 @@ import { h1DataSource, h2DataSource, h3DataSource, pDataSource, infoDataSource, 
 import { transformDataSource } from './renderData';
 // import { iOSCardDataSource } from './IOSCard/data'
 import { shopItemDataSource, shopListDataSource } from './Shop/data';
+import { wechatLoginDataSource } from './WeChat/data';
 
 export interface IComponent {
   // type?: 'children' | 'YYUI'
@@ -394,6 +393,18 @@ export const componentsData = [
       //   icon: '',
       //   data: transformDataSource(iOSCardDataSource)
       // },
+    ],
+  },
+  {
+    label: '页面',
+    components: [
+      {
+        name: 'YYWeChatLogin',
+        text: 'WeChat Login',
+        icon: '',
+        data: transformDataSource(wechatLoginDataSource),
+        children: [],
+      },
     ],
   },
   // {

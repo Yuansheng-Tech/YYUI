@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import { View } from '@tarojs/components';
-import { RootStore } from '@ysyp/stores/src/RootStore';
+import { RootStore } from '@ysyp/stores/dist/RootStore';
 import { YYLoadMore } from '../LoadMore';
 import { IgoodsGridProps } from './index';
 import { YYLoadGoodsGrid } from './load';

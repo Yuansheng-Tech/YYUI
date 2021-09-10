@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { mapValues } from 'lodash';
+import _mapValues from 'lodash.mapvalues';
 
 import * as YYUI from './index';
 
 export const transformDataSource = (val) => {
-  return mapValues(val, (v) => {
+  return _mapValues(val, (v) => {
     console.log('transformDataSource', typeof v, v);
     return typeof v === 'function' ? v.toString() : v;
   });
@@ -18,7 +18,7 @@ export const unTransformDataSource = (val) => {
   String.prototype.toFunction = function () {
     return eval('(' + this + ')');
   };
-  return mapValues(val, (v) => {
+  return _mapValues(val, (v) => {
     if (Array.isArray(v)) {
       return v;
     }
