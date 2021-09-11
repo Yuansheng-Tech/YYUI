@@ -45,6 +45,8 @@ export { YYPlayVioce } from './Voice/play';
 export { YYTabGoods } from './GoodsGrid/tabs';
 export { YYWeChatLogin } from './WeChat/login';
 
+// web components
+import './web-components'
 // others
 // export { componentsData } from './componentsData';
 // export { renderData, renderDatas, transformDataSource, unTransformDataSource } from './renderData';
