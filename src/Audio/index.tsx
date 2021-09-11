@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { AudioProps } from '@tarojs/components/types/Audio';
+import { Button, View } from '@tarojs/components';
 
 /**
  * 音频。1.6.0版本开始，该组件不再维护。建议使用能力更强的 Taro.createInnerAudioContext 接口
@@ -7,17 +8,41 @@ import { AudioProps } from '@tarojs/components/types/Audio';
  * https://taro-docs.jd.com/taro/docs/components/media/audio/
  */
 
-export const YYAudio = (props: AudioProps) => {
-  const innerAudioContext = Taro.createInnerAudioContext();
-  innerAudioContext.autoplay = true;
-  innerAudioContext.src =
-    'https://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46';
-  innerAudioContext.onPlay(() => {
-    console.log('开始播放');
-  });
-  innerAudioContext.onError((res) => {
-    console.log(res.errMsg);
-    console.log(res.errCode);
-  });
-  return innerAudioContext;
-};
+export class YYAudio extends Component<AudioProps, any> {
+  innerAudioContext = Taro.createInnerAudioContext();
+  // componentDidMount() {
+  //     this.innerAudioContext.onPlay(() => {
+  //         console.log('播放音频');
+  //     });
+  //     this.innerAudioContext.onPause(() => {
+  //         console.log('暂停音频');
+  //     });
+  //     this.innerAudioContext.onStop(() => {
+  //         console.log('停止');//这里会不停的执行
+  //     });
+  //     this.innerAudioContext.onEnded(() => {
+  //         console.log('自然停止');
+  //     });
+  // }
+  componentWillUnmount() {
+    this.innerAudioContext.destroy();
+  }
+  onPlay = () => {
+    this.innerAudioContext.src = '';
+    this.innerAudioContext.play();
+  };
+  onPause = () => {
+    this.innerAudioContext.onPause();
+  };
+  render() {
+    return (
+      <View className="yy-audio">
+        {this.innerAudioContext.paused ? (
+          <Button onClick={this.onPlay}>播放</Button>
+        ) : (
+          <Button onClick={this.onPause}>暂停</Button>
+        )}
+      </View>
+    );
+  }
+}
