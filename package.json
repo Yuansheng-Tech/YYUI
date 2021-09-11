@@ -79,6 +79,7 @@
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-json": "^4.1.0",
+    "@skypack/package-check": "^0.2.2",
     "@types/classnames": "^2.3.1",
     "@types/lodash": "^4.14.170",
     "@types/node": "^14.17.0",
@@ -117,5 +118,10 @@
   "np": {
     "yarn": false,
     "contents": "."
+  },
+  "exports": {
+    "require": "./index.js",
+    "import": "./dist/index.esm.js",
+    "default": "./dist/index.esm.js"
   }
 }
