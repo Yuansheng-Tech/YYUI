@@ -27,6 +27,11 @@
   },
   "license": "MIT",
   "author": "Fu Yin",
+  "exports": {
+    "require": "./index.js",
+    "import": "./dist/index.esm.js",
+    "default": "./dist/index.esm.js"
+  },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "source": "src/index.ts",
@@ -71,8 +76,14 @@
     "singleQuote": true
   },
   "dependencies": {
+    "@tarojs/components": "^3.3.7",
+    "@tarojs/taro": "^3.3.7",
+    "@ysyp/stores": "latest",
+    "@ysyp/utils": "latest",
     "classnames": "^2.3.1",
+    "react-web-component": "^2.0.2",
     "swr": "^0.5.6",
+    "taro-ui": "^3.0.0-alpha.10",
     "ts-transformer-keys": "^0.4.3"
   },
   "devDependencies": {
@@ -103,14 +114,7 @@
     "tslib": "^2.2.0",
     "typescript": "^4.2.4"
   },
-  "peerDependencies": {
-    "@tarojs/components": "^3.3.7",
-    "@tarojs/taro": "^3.3.7",
-    "@ysyp/stores": "latest",
-    "@ysyp/utils": "latest",
-    "react-web-component": "^2.0.2",
-    "taro-ui": "^3.0.0-alpha.10"
-  },
+  "peerDependencies": {},
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -118,10 +122,5 @@
   "np": {
     "yarn": false,
     "contents": "."
-  },
-  "exports": {
-    "require": "./index.js",
-    "import": "./dist/index.esm.js",
-    "default": "./dist/index.esm.js"
   }
 }
