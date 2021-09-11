@@ -41,3 +41,6 @@ MIT
 [npm-downloads-url]: https://www.npmjs.com/package/@ysyp/ui
 [license-image]: https://img.shields.io/github/license/Yuansheng-Tech/YYUI?style=flat-square
 [license-url]: https://github.com/Yuansheng-Tech/YYUI/blob/master/LICENSE
+
+
+[skypack](https://cdn.skypack.dev/@ysyp/ui)
