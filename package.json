@@ -107,6 +107,7 @@
     "@tarojs/taro": "^3.3.7",
     "@ysyp/stores": "latest",
     "@ysyp/utils": "latest",
+    "react-web-component": "^2.0.2",
     "taro-ui": "^3.0.0-alpha.10"
   },
   "publishConfig": {

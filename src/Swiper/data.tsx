@@ -1,7 +1,7 @@
 import { SwiperProps } from '@tarojs/components/types/Swiper';
-import { IProps } from './index';
+import { ISwiperProps } from './index';
 
-export const swiperDataSource: IProps & SwiperProps = {
+export const swiperDataSource: ISwiperProps & SwiperProps = {
   vertical: false,
   items: [
     {

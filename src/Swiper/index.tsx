@@ -3,8 +3,8 @@ import { Swiper, SwiperItem, Image } from '@tarojs/components';
 import { SwiperProps } from '@tarojs/components/types/Swiper';
 import { router } from '@ysyp/utils/dist/router';
 
-export interface IProps {
-  vertical: boolean;
+export interface ISwiperProps {
+  vertical?: boolean;
   items: {
     url: string;
     image: string;
@@ -12,7 +12,7 @@ export interface IProps {
   }[];
 }
 
-export const YYSwiper = (props: IProps & SwiperProps) => {
+export const YYSwiper = (props: ISwiperProps & SwiperProps) => {
   let { vertical, items = [], ...others } = props;
   // items = (typeof items === 'string' && /^(\[|\})/g.test(items)) ? JSON.parse(items) : items;
   return (
