@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View } from '@tarojs/components';
-import useSWR from 'swr';
+// import useSWR from 'swr';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
 import { fetcher } from '@ysyp/utils/dist/fetcher';
 import { ITabsProps, YYTabs } from '.';
