@@ -11,12 +11,12 @@ export const YYLoadTabs = (props: ITabsProps) => {
   let { tabList } = props;
   if (tabUrl) {
     const rootStore = useContext(createContext(new RootStore()));
-    const { data } = useSWR(`${tabUrl}?take=${take}&skip=${skip}`, (tabUrl) => fetcher(tabUrl));
-    const { data: queryData = [] } = data || {};
-    if (store) {
-      rootStore[store].setDatas(queryData);
-      tabList = rootStore[store].datas;
-    }
+    // const { data } = useSWR(`${tabUrl}?take=${take}&skip=${skip}`, (tabUrl) => fetcher(tabUrl));
+    // const { data: queryData = [] } = data || {};
+    // if (store) {
+    //   rootStore[store].setDatas(queryData);
+    //   tabList = rootStore[store].datas;
+    // }
   }
 
   return (

@@ -110,7 +110,6 @@
     "@ysyp/utils": "latest",
     "classnames": "^2.3.1",
     "react-web-component": "^2.0.2",
-    "swr": "^0.5.6",
     "taro-ui": "^3.0.0-alpha.10",
     "ts-transformer-keys": "^0.4.3"
   },
