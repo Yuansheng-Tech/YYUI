@@ -77,8 +77,18 @@ export const YYGoodsCard = (props: IProps) => {
         ...style,
       }}
     >
-      {!reverse && renderData.map((v, k) => <View key={k}>{v}</View>)}
-      {reverse && renderData.reverse().map((v, k) => <View key={k}>{v}</View>)}
+      {!reverse &&
+        renderData.map((v, k) => (
+          <View className="yy-goods-card-main" key={k}>
+            {v}
+          </View>
+        ))}
+      {reverse &&
+        renderData.reverse().map((v, k) => (
+          <View className="yy-goods-card-main" key={k}>
+            {v}
+          </View>
+        ))}
     </View>
   );
 };
