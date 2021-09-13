@@ -6,6 +6,7 @@ import { audioDataSource } from './Audio/data';
 import { gridDataSource } from './Grid/data';
 import { goodsGridDataSource, tabGoodsDataSource } from './GoodsGrid/data';
 import { goodsThreeDataSource } from './GoodsThree/data';
+import { goodsCardDataSource } from './GoodsCard/data';
 import { couponDataSource } from './Coupon/data';
 import { textareaDataSource } from './Textarea/data';
 import { inputDataSource } from './Input/data';
@@ -35,7 +36,7 @@ import { h1DataSource, h2DataSource, h3DataSource, pDataSource, infoDataSource, 
 import { transformDataSource } from './renderData';
 // import { iOSCardDataSource } from './IOSCard/data'
 import { shopItemDataSource, shopListDataSource } from './Shop/data';
-import { wechatLoginDataSource } from './WeChat/data';
+import { wechatLoginDataSource } from './Wechat/data';
 
 export interface IComponent {
   // type?: 'children' | 'YYUI'
@@ -52,7 +53,7 @@ export const componentsData = [
       {
         name: 'YYButton',
         text: '按钮',
-        icon: 'http://localhost:3333/static/memo/files/button.png',
+        icon: 'https://file.yuanshengyoupin.com/files/button.png',
         data: transformDataSource(buttonDataSource),
         children: [],
       },
@@ -73,14 +74,14 @@ export const componentsData = [
       {
         name: 'YYSearchBar',
         text: '搜索框',
-        icon: 'http://localhost:3333/static/memo/files/search.png',
+        icon: 'https://file.yuanshengyoupin.com/files/search.png',
         data: transformDataSource(searchBarDataSource),
         children: [],
       },
       {
         name: 'YYList',
         text: '列表',
-        icon: 'http://localhost:3333/static/memo/files/List.png',
+        icon: 'https://file.yuanshengyoupin.com/files/List.png',
         data: transformDataSource(listDataSource),
         children: [],
       },
@@ -99,14 +100,14 @@ export const componentsData = [
       {
         name: 'YYTitle',
         text: '标题',
-        icon: 'http://localhost:3333/static/memo/files/titleSub.png',
+        icon: 'https://file.yuanshengyoupin.com/files/titleSub.png',
         data: transformDataSource(titleDataSource),
         children: [],
       },
       {
         name: 'YYSubTitle',
         text: '标题&副标题',
-        icon: 'http://localhost:3333/static/memo/files/titleSub.png',
+        icon: 'https://file.yuanshengyoupin.com/files/titleSub.png',
         data: transformDataSource(subTitleDataSource),
         children: [],
       },
@@ -127,7 +128,7 @@ export const componentsData = [
       {
         name: 'YYLoginAvatar',
         text: '登录头像',
-        icon: 'http://localhost:3333/static/memo/files/Login.png',
+        icon: 'https://file.yuanshengyoupin.com/files/Login.png',
         data: transformDataSource(loginAvatarDataSource),
         children: [],
       },
@@ -155,7 +156,7 @@ export const componentsData = [
       {
         name: 'YYSwiper',
         text: '轮播图',
-        icon: 'http://localhost:3333/static/memo/files/banner.png',
+        icon: 'https://file.yuanshengyoupin.com/files/banner.png',
         data: transformDataSource(swiperDataSource),
         children: [],
       },
@@ -202,14 +203,14 @@ export const componentsData = [
       {
         name: 'YYTabs',
         text: '标签页',
-        icon: 'http://localhost:3333/static/memo/files/Tabs.png',
+        icon: 'https://file.yuanshengyoupin.com/files/Tabs.png',
         data: transformDataSource(tabsDataSource),
         children: [],
       },
       {
         name: 'YYGrid',
         text: '栅格布局',
-        icon: 'http://localhost:3333/static/memo/files/Grid.png',
+        icon: 'https://file.yuanshengyoupin.com/files/Grid.png',
         data: transformDataSource(gridDataSource),
         children: [],
       },
@@ -275,14 +276,14 @@ export const componentsData = [
       {
         name: 'YYContact',
         text: '联系',
-        icon: 'http://localhost:3333/static/memo/files/shop-banner.png',
+        icon: 'https://file.yuanshengyoupin.com/files/shop-banner.png',
         data: transformDataSource(contactDataSource),
         children: [],
       },
       {
         name: 'YYLocationSwitch',
         text: '切换店铺',
-        icon: 'http://localhost:3333/static/memo/files/shop-address1.png',
+        icon: 'https://file.yuanshengyoupin.com/files/shop-address1.png',
         data: transformDataSource(locationSwitchDataSource),
         children: [],
       },
@@ -294,21 +295,28 @@ export const componentsData = [
       {
         name: 'YYLoadTabs',
         text: '标签页',
-        icon: 'http://localhost:3333/static/memo/files/Tabs.png',
+        icon: 'https://file.yuanshengyoupin.com/files/Tabs.png',
         data: transformDataSource(tabsDataSource),
         children: [],
       },
       {
         name: 'YYGoodsGrid',
         text: '商品栅格',
-        icon: 'http://localhost:3333/static/memo/files/goodGrid.png',
+        icon: 'https://file.yuanshengyoupin.com/files/goodGrid.png',
         data: transformDataSource(goodsGridDataSource),
+        children: [],
+      },
+      {
+        name: 'YYGoodsCard',
+        text: '商品卡片',
+        icon: 'https://file.yuanshengyoupin.com/files/goodGrid.png',
+        data: transformDataSource(goodsCardDataSource),
         children: [],
       },
       {
         name: 'YYLoadMoreGoodsGrid',
         text: '商品栅格（loadmore）',
-        icon: 'http://localhost:3333/static/memo/files/goodGrid.png',
+        icon: 'https://file.yuanshengyoupin.com/files/goodGrid.png',
         data: transformDataSource(goodsGridDataSource),
         children: [],
       },
@@ -336,7 +344,7 @@ export const componentsData = [
       {
         name: 'YYLoadMore',
         text: '加载更多',
-        icon: 'http://localhost:3333/static/memo/files/seemore.png',
+        icon: 'https://file.yuanshengyoupin.com/files/seemore.png',
         data: transformDataSource(loadMoreDataSource),
         children: [],
       },
@@ -399,8 +407,8 @@ export const componentsData = [
     label: '页面',
     components: [
       {
-        name: 'YYWeChatLogin',
-        text: 'WeChat Login',
+        name: 'YYWechatLogin',
+        text: 'Wechat Login',
         icon: '',
         data: transformDataSource(wechatLoginDataSource),
         children: [],

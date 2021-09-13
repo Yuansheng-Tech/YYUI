@@ -3,7 +3,7 @@ import { ICartListProps } from './index';
 export const cartListDataSource: ICartListProps = {
   list: [
     {
-      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      icon: 'https://file.yuanshengyoupin.com/files/hb10.png',
       name: '商品1',
       summary: '商品1',
       des: [],
@@ -12,7 +12,7 @@ export const cartListDataSource: ICartListProps = {
       seleted: true,
     },
     {
-      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      icon: 'https://file.yuanshengyoupin.com/files/hb10.png',
       name: '商品2',
       summary: '商品2',
       des: [],

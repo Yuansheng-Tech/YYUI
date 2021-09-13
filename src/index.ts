@@ -3,6 +3,7 @@ export { YYCoupon } from './Coupon';
 export { YYGoodsGrid } from './GoodsGrid';
 export { YYLoadMoreGoodsGrid } from './GoodsGrid/more';
 export { YYGoodsThree } from './GoodsThree';
+export { YYGoodsCard } from './GoodsCard';
 export { YYGrid } from './Grid';
 export { YYInput } from './Input';
 export { YYVideo } from './Video/index';
@@ -43,7 +44,7 @@ export { YYShopItem } from './Shop/item';
 export { YYShopList } from './Shop/list';
 export { YYPlayVioce } from './Voice/play';
 export { YYTabGoods } from './GoodsGrid/tabs';
-export { YYWeChatLogin } from './WeChat/login';
+export { YYWechatLogin } from './Wechat/login';
 
 // web components
 // import './web-components'

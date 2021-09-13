@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Taro from '@tarojs/taro';
 import { AudioProps } from '@tarojs/components/types/Audio';
 import { Button, View } from '@tarojs/components';
 
@@ -10,20 +11,6 @@ import { Button, View } from '@tarojs/components';
 
 export class YYAudio extends Component<AudioProps, any> {
   innerAudioContext = Taro.createInnerAudioContext();
-  // componentDidMount() {
-  //     this.innerAudioContext.onPlay(() => {
-  //         console.log('播放音频');
-  //     });
-  //     this.innerAudioContext.onPause(() => {
-  //         console.log('暂停音频');
-  //     });
-  //     this.innerAudioContext.onStop(() => {
-  //         console.log('停止');//这里会不停的执行
-  //     });
-  //     this.innerAudioContext.onEnded(() => {
-  //         console.log('自然停止');
-  //     });
-  // }
   componentWillUnmount() {
     this.innerAudioContext.destroy();
   }

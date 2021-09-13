@@ -27,7 +27,7 @@ export const infoDataSource: IInfoProps = {
 };
 
 export const imgDataSource: IImgProps = {
-  src: 'http://localhost:3333/static/memo/files/hb10.png',
+  src: 'https://file.yuanshengyoupin.com/files/hb10.png',
   mode: 'widthFix',
   height: '200px',
 };

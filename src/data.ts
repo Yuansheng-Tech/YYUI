@@ -37,4 +37,4 @@ export { imgDataSource } from './Article/data';
 export { shopItemDataSource } from './Shop/data';
 export { shopListDataSource } from './Shop/data';
 // export { playVioceDataSource } from './Voice/data';
-export { wechatLoginDataSource } from './WeChat/data';
+export { wechatLoginDataSource } from './Wechat/data';

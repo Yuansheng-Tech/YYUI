@@ -9,9 +9,9 @@ export const tabsDataSource: ITabsProps & AtTabsProps = {
   current: 0,
   tabDirection: 'horizontal',
   tabList: [
-    { id: '1', name: '待办事项', value: '0', title: '待办事项' },
-    { id: '2', name: '拍照', value: '1', title: '拍照' },
-    { id: '3', name: '通讯录', value: '2', title: '通讯录' },
+    { id: '1', name: '水果', value: '0', title: '水果' },
+    { id: '2', name: '肉禽蛋', value: '1', title: '肉禽蛋' },
+    { id: '3', name: '蔬菜', value: '2', title: '蔬菜' },
   ],
   onClick: (data: any) => {
     console.log('onClick data', data);

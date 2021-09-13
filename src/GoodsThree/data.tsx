@@ -14,22 +14,22 @@ export const goodsThreeDataSource: IProps & AtGridProps = {
   },
   data: [
     {
-      image: 'http://localhost:3333/static/memo/files/hb10.png',
+      image: 'https://file.yuanshengyoupin.com/files/hb10.png',
       value: '领取中心',
       // iconInfo: '',
       url: 'https://yuanshengyoupin.com',
     },
     {
-      image: 'http://localhost:3333/static/memo/files/hb10.png',
+      image: 'https://file.yuanshengyoupin.com/files/hb10.png',
       value: '找折扣',
       url: 'https://yuanshengyoupin.com',
     },
     {
-      image: 'http://localhost:3333/static/memo/files/hb10.png',
+      image: 'https://file.yuanshengyoupin.com/files/hb10.png',
       value: '领会员',
     },
     {
-      image: 'http://localhost:3333/static/memo/files/hb10.png',
+      image: 'https://file.yuanshengyoupin.com/files/hb10.png',
       value: '领会员',
     },
   ],

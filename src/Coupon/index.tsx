@@ -16,6 +16,7 @@ export interface ICouponProps {
     subtitle: string;
     actionLabel: string;
   }[];
+  style?: object;
 }
 
 export const YYCoupon = (props: ICouponProps) => {
@@ -24,6 +25,7 @@ export const YYCoupon = (props: ICouponProps) => {
     bgColor = 'rgb(255, 245, 225)',
     borderColor = 'rgb(255, 131, 11)',
     data = [],
+    style = {},
   } = props;
   const onHandleClick = (id: string) => {
     console.log('id', id);
@@ -33,6 +35,7 @@ export const YYCoupon = (props: ICouponProps) => {
       className="yy-coupon"
       style={{
         backgroundColor: bgColor,
+        ...style,
       }}
     >
       {data.map((v, k) => {

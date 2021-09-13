@@ -3,12 +3,12 @@ import { Button, OpenData, View } from '@tarojs/components';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
 import { HTTP_STATUS } from '@ysyp/utils/dist/fetch';
 
-export interface IWeChatLoginProps {
+export interface IWechatLoginProps {
   loginText: string;
   warningText: string;
 }
 
-export const YYWeChatLogin = (props: IWeChatLoginProps) => {
+export const YYWechatLogin = (props: IWechatLoginProps) => {
   const { loginText = '微信用户登录', warningText = '欢迎回来' } = props;
 
   const [btnText, setBtnText] = useState(loginText);

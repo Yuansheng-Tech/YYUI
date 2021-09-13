@@ -10,13 +10,13 @@ export const imagePickerDataSource: IImagePickerProps & AtImagePickerProps = {
   // sizeType: 100,
   files: [
     {
-      url: 'http://localhost:3333/static/memo/files/hb10.png',
+      url: 'https://file.yuanshengyoupin.com/files/hb10.png',
     },
     {
-      url: 'http://localhost:3333/static/memo/files/hb10.png',
+      url: 'https://file.yuanshengyoupin.com/files/hb10.png',
     },
     {
-      url: 'http://localhost:3333/static/memo/files/hb10.png',
+      url: 'https://file.yuanshengyoupin.com/files/hb10.png',
     },
   ],
   onChange: () => {},

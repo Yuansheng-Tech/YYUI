@@ -6,12 +6,12 @@ export const swiperDataSource: ISwiperProps & SwiperProps = {
   items: [
     {
       url: 'https://yuanshengyoupin.com',
-      image: 'http://localhost:3333/static/memo/files/hb10.png',
+      image: 'https://file.yuanshengyoupin.com/files/hb10.png',
       imageStyle: {},
     },
     {
       url: 'https://yuanshengyoupin.com',
-      image: 'http://localhost:3333/static/memo/files/hb10.png',
+      image: 'https://file.yuanshengyoupin.com/files/hb10.png',
       imageStyle: {},
     },
   ],

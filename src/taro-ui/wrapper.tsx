@@ -13,7 +13,7 @@ const Wrapper = (props: any) => {
       })}
       {...props}
       onClick={(e) => {
-        document.querySelectorAll('.am-popover').forEach((v) => v.classList.add('am-popover-hidden'));
+        document.querySelectorAll('.adm-popover').forEach((v) => v.classList.add('am-popover-hidden'));
         document.querySelectorAll('.taro-ui-wrapper').forEach((v) => v.classList.remove('taro-ui-cover'));
         setCoverClass(!coverClass);
         e.stopPropagation();

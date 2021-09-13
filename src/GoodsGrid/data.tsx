@@ -26,14 +26,14 @@ export const goodsGridDataSource: IgoodsGridProps & AtGridProps = {
   data: [
     {
       id: 'xxx1',
-      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      icon: 'https://file.yuanshengyoupin.com/files/hb10.png',
       name: '领取中心',
       price_min: 11.0,
       original_price: 12.0,
     },
     {
       id: 'xxx2',
-      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      icon: 'https://file.yuanshengyoupin.com/files/hb10.png',
       name: '找折扣',
       url: 'https://yuanshengyoupin.com',
       price_min: 11.0,
@@ -41,14 +41,14 @@ export const goodsGridDataSource: IgoodsGridProps & AtGridProps = {
     },
     {
       id: 'xxx3',
-      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      icon: 'https://file.yuanshengyoupin.com/files/hb10.png',
       name: '领会员',
       price_min: 11.0,
       original_price: 0,
     },
     {
       id: 'xxx4',
-      icon: 'http://localhost:3333/static/memo/files/hb10.png',
+      icon: 'https://file.yuanshengyoupin.com/files/hb10.png',
       name: '新品首发',
       price_min: 0,
       original_price: 0,
