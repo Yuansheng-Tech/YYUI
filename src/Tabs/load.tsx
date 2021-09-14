@@ -1,8 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import { View } from '@tarojs/components';
-// import useSWR from 'swr';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
-import { fetcher } from '@ysyp/utils/dist/fetcher';
+import { useQuery } from '@ysyp/utils/dist/useQuery';
 import { ITabsProps, YYTabs } from '.';
 
 export const YYLoadTabs = (props: ITabsProps) => {
@@ -11,12 +10,17 @@ export const YYLoadTabs = (props: ITabsProps) => {
   let { tabList } = props;
   if (tabUrl) {
     const rootStore = useContext(createContext(new RootStore()));
-    // const { data } = useSWR(`${tabUrl}?take=${take}&skip=${skip}`, (tabUrl) => fetcher(tabUrl));
-    // const { data: queryData = [] } = data || {};
-    // if (store) {
-    //   rootStore[store].setDatas(queryData);
-    //   tabList = rootStore[store].datas;
-    // }
+    const { data } = useQuery(
+      {
+        url: `${tabUrl}?take=${take}&skip=${skip}`,
+      },
+      {}
+    );
+    const { data: queryData = [] } = data || {};
+    if (store) {
+      rootStore[store].setDatas(queryData);
+      tabList = rootStore[store].datas;
+    }
   }
 
   return (
