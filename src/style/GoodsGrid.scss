@@ -53,3 +53,12 @@
     flex: 1;
   }
 }
+
+.yy-tab-goods {
+  display: flex;
+  flex-direction: row;
+
+  .yy-goods-load-more-grid {
+    flex: 1;
+  }
+}

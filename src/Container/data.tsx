@@ -1,3 +1,4 @@
+import { IFetchContainerProps } from './fetch';
 import { IContainerProps } from './index';
 
 export const containerDataSource: IContainerProps = {
@@ -5,5 +6,11 @@ export const containerDataSource: IContainerProps = {
   height: '100%',
   width: '100%',
   flexDirection: 'column',
+  children: null,
+};
+
+export const fetchContainerDataSource: IFetchContainerProps = {
+  store: 'goodStore',
+  url: '/goods',
   children: null,
 };

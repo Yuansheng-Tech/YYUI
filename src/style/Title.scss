@@ -6,6 +6,11 @@
   align-items: center;
   background-color: #fff;
 
+  &-icon {
+    // width: 20px;
+    margin-right: 10px;
+  }
+
   &-left {
     flex: 2;
     display: flex;
@@ -16,6 +21,8 @@
     color: #000;
     font-weight: bold;
     font-size: 1;
+    align-items: center;
+    display: flex;
   }
   &-subtext {
     flex: 1;
@@ -29,4 +36,7 @@
   &-arrow {
     margin-left: rem(6px);
   }
+}
+
+.yy-cart-title {
 }

@@ -1,0 +1,14 @@
+.yy-location-content {
+  display: flex;
+  &_icon {
+    width: 40px;
+    img {
+      width: 100%;
+    }
+  }
+  &_text {
+    flex: 1;
+    line-height: 40px;
+    margin-left: 20px;
+  }
+}

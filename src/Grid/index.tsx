@@ -1,9 +1,8 @@
 import React from 'react';
 import { AtGrid } from 'taro-ui';
-import { AtGridProps } from 'taro-ui/types/grid';
 import classnames from 'classnames';
 
-export interface IProps {
+export interface IGridProps {
   mode: 'square' | 'rect';
   hasBorder: boolean;
   columnNum: number;
@@ -15,7 +14,7 @@ export interface IProps {
   }[];
 }
 
-export const YYGrid = (props: AtGridProps) => {
+export const YYGrid = (props: IGridProps) => {
   const {
     // mode = 'rect',
     // hasBorder = true,

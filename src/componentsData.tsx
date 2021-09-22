@@ -1,9 +1,9 @@
-import { subTitleDataSource, titleDataSource } from './Title/data';
+import { cartTitleDataSource, subTitleDataSource, titleDataSource } from './Title/data';
 import { searchBarDataSource } from './SearchBar/data';
 import { swiperDataSource } from './Swiper/data';
 import { videoDataSource } from './Video/data';
 import { audioDataSource } from './Audio/data';
-import { gridDataSource } from './Grid/data';
+import { gridDataSource, imgBgGridDataSource } from './Grid/data';
 import { goodsGridDataSource, tabGoodsDataSource } from './GoodsGrid/data';
 import { goodsThreeDataSource } from './GoodsThree/data';
 import { goodsCardDataSource } from './GoodsCard/data';
@@ -15,10 +15,10 @@ import { spacelineDataSource } from './SpaceLine/data';
 import { tabBarDataSource } from './TabBar/data';
 import { tabsDataSource } from './Tabs/data';
 import { htmlPageDataSource } from './Html/data';
-import { imageDataSource } from './Image/data';
+import { imageDataSource, imageListDataSource } from './Image/data';
 import { containerDataSource } from './Container/data';
 import { mapDataSource } from './Map/data';
-import { cartBuyDataSource } from './CartBuy/data';
+import { cartBuyDataSource, cartSumBuyDataSource } from './CartBuy/data';
 import { cartAddDataSource } from './CartAdd/data';
 import { cartGoodDataSource } from './CartGood/data';
 import { buttonDataSource } from './Button/data';
@@ -35,8 +35,10 @@ import { h1DataSource, h2DataSource, h3DataSource, pDataSource, infoDataSource, 
 
 import { transformDataSource } from './renderData';
 // import { iOSCardDataSource } from './IOSCard/data'
-import { shopItemDataSource, shopListDataSource } from './Shop/data';
+import { shopItemDataSource, shopItemTopDataSource, shopListDataSource } from './Shop/data';
+import { shopWithGoodsItemDataSource, shopWithGoodsListDataSource } from './Shop/data';
 import { wechatLoginDataSource } from './Wechat/data';
+import { locationDataSource } from './Location/data';
 
 export interface IComponent {
   // type?: 'children' | 'YYUI'
@@ -112,6 +114,13 @@ export const componentsData = [
         children: [],
       },
       {
+        name: 'YYCartTitle',
+        text: '购物车店铺标题',
+        icon: 'https://file.yuanshengyoupin.com/files/titleSub.png',
+        data: transformDataSource(cartTitleDataSource),
+        children: [],
+      },
+      {
         name: 'YYTitleline',
         text: '标题线',
         icon: '',
@@ -144,6 +153,13 @@ export const componentsData = [
         text: '图片',
         icon: '',
         data: transformDataSource(imageDataSource),
+        children: [],
+      },
+      {
+        name: 'YYImageList',
+        text: '图片列表',
+        icon: '',
+        data: transformDataSource(imageListDataSource),
         children: [],
       },
       {
@@ -202,7 +218,7 @@ export const componentsData = [
       },
       {
         name: 'YYTabs',
-        text: '标签页',
+        text: '标签页面',
         icon: 'https://file.yuanshengyoupin.com/files/Tabs.png',
         data: transformDataSource(tabsDataSource),
         children: [],
@@ -212,6 +228,13 @@ export const componentsData = [
         text: '栅格布局',
         icon: 'https://file.yuanshengyoupin.com/files/Grid.png',
         data: transformDataSource(gridDataSource),
+        children: [],
+      },
+      {
+        name: 'YYImgBgGrid',
+        text: '背景栅格',
+        icon: 'https://file.yuanshengyoupin.com/files/Grid.png',
+        data: transformDataSource(imgBgGridDataSource),
         children: [],
       },
       {
@@ -233,6 +256,13 @@ export const componentsData = [
         text: '加购按钮',
         icon: '',
         data: transformDataSource(cartBuyDataSource),
+        children: [],
+      },
+      {
+        name: 'YYCartSumBuy',
+        text: '购物车结算',
+        icon: '',
+        data: transformDataSource(cartSumBuyDataSource),
         children: [],
       },
       {
@@ -287,6 +317,13 @@ export const componentsData = [
         data: transformDataSource(locationSwitchDataSource),
         children: [],
       },
+      {
+        name: 'YYLocation',
+        text: '定位',
+        icon: 'https://file.yuanshengyoupin.com/files/shop-address1.png',
+        data: transformDataSource(locationDataSource),
+        children: [],
+      },
     ],
   },
   {
@@ -332,6 +369,27 @@ export const componentsData = [
         text: '店铺列表',
         icon: '',
         data: transformDataSource(shopListDataSource),
+        children: [],
+      },
+      {
+        name: 'YYShopWithGoodsItem',
+        text: '单个店铺2',
+        icon: '',
+        data: transformDataSource(shopWithGoodsItemDataSource),
+        children: [],
+      },
+      {
+        name: 'YYShopWithGoodsList',
+        text: '店铺列表2',
+        icon: '',
+        data: transformDataSource(shopWithGoodsListDataSource),
+        children: [],
+      },
+      {
+        name: 'YYShopItemTop',
+        text: '店铺详情头部',
+        icon: '',
+        data: transformDataSource(shopItemTopDataSource),
         children: [],
       },
       {

@@ -12,6 +12,7 @@ export interface ITabsProps {
   tabList?: (TabItem & { id: string; name: string; value: string })[];
   tabDirection?: 'vertical' | 'horizontal';
   onClick?: (data: any) => void;
+  style?: object;
 }
 
 export const YYTabs = (props: ITabsProps) => {

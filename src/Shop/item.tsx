@@ -12,53 +12,45 @@ export interface IShopItem {
   start_time: string;
   end_time: string;
   distanceSpace: number;
-}
 
-export interface IShopItemView {
   jumpShop?: (item: IShopItem) => void;
-  item: IShopItem;
-  index: number;
 }
 
-export const YYShopItem = (props: IShopItemView) => {
+export const YYShopItem = (props: IShopItem) => {
   const selectShop = Taro.getStorageSync('selectShop') || {};
   const [chooseShop, setcChooseShop] = React.useState(selectShop || {});
-  const { item, index, jumpShop } = props;
+  const { jumpShop, ...thisProps } = props;
   return (
-    <>
-      {item && (
-        <View
-          key={index}
-          className={classnames({
-            'shop-item': true,
-            'shop-item-active': item.id === chooseShop.id,
-          })}
-          onClick={() => {
-            setcChooseShop(item);
-            Taro.setStorageSync('selectShop', item);
-          }}
-        >
-          <View className="shop-item-left">
-            <Text className="shop-item-name">
-              {item.name}（{item.status}）
-            </Text>
-            <Text className="shop-item-address">{item.address}</Text>
-            <Text className="shop-item-time">
-              营业时间：{item.start_time}-{item.end_time}
-            </Text>
-          </View>
-          <View
-            className="shop-item-right"
-            onClick={() => {
-              Taro.setStorageSync('selectShop', item);
-              jumpShop && jumpShop(item);
-            }}
-          >
-            <Text className="shop-item-choose">选择</Text>
-            <Text className="shop-item-distance">距离{item.distanceSpace}km</Text>
-          </View>
-        </View>
-      )}
-    </>
+    <View
+      key={thisProps.id}
+      className={classnames({
+        'shop-item': true,
+        'shop-item-active': thisProps.id === chooseShop.id,
+      })}
+      onClick={() => {
+        setcChooseShop(props);
+        Taro.setStorageSync('selectShop', props);
+      }}
+    >
+      <View className="shop-item-left">
+        <Text className="shop-item-name">
+          {thisProps.name}（{thisProps.status}）
+        </Text>
+        <Text className="shop-item-address">{thisProps.address}</Text>
+        <Text className="shop-item-time">
+          营业时间：{thisProps.start_time}-{thisProps.end_time}
+        </Text>
+      </View>
+      <View
+        className="shop-item-right"
+        onClick={() => {
+          Taro.setStorageSync('selectShop', thisProps);
+          jumpShop && jumpShop(thisProps);
+        }}
+      >
+        <Text className="shop-item-choose">选择</Text>
+        <Text className="shop-item-distance">距离{thisProps.distanceSpace}km</Text>
+      </View>
+    </View>
   );
 };

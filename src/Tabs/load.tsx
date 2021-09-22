@@ -5,18 +5,21 @@ import { useQuery } from '@ysyp/utils/dist/useQuery';
 import { ITabsProps, YYTabs } from '.';
 
 export const YYLoadTabs = (props: ITabsProps) => {
-  console.log('YYLoadTabs props', props);
   const { tabUrl = '', skip = 0, take = 10, store } = props;
   let { tabList } = props;
   if (tabUrl) {
     const rootStore = useContext(createContext(new RootStore()));
-    const { data } = useQuery(
+    const {
+      data: queryData = [],
+      loaded,
+      loading,
+    } = useQuery(
       {
         url: `${tabUrl}?take=${take}&skip=${skip}`,
       },
       {}
     );
-    const { data: queryData = [] } = data || {};
+
     if (store) {
       rootStore[store].setDatas(queryData);
       tabList = rootStore[store].datas;

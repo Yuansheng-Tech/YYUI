@@ -1,4 +1,5 @@
 import React from 'react';
+import Taro from '@tarojs/taro';
 import { AtList, AtSwipeAction } from 'taro-ui';
 import { View, Text, Image } from '@tarojs/components';
 import classnames from 'classnames';
@@ -21,68 +22,72 @@ export interface ICartListProps {
 }
 
 export const YYCartList = (props: ICartListProps) => {
-  const { maxDistance = 100, areaWidth = 100, list } = props;
+  const {
+    maxDistance = 0,
+    areaWidth = 375, // Taro.getSystemInfoSync().screenWidth,
+    list,
+  } = props;
   return (
     <AtList className="yy-cart-list">
       {!!list.length &&
         list.map((item, index) => (
-          <AtSwipeAction
-            key={index}
-            maxDistance={maxDistance}
-            areaWidth={areaWidth}
-            options={[
-              {
-                text: '删除',
-                style: {
-                  backgroundColor: '#FF4949',
-                },
-              },
-            ]}
-            onClick={() => {
-              // onActionClick(item, index)
-            }}
-          >
-            <View className="shop-item">
-              <View className="left flex">
-                <View
-                  onClick={() => {
-                    // onSeletedClick(item)
-                  }}
-                >
-                  <Text
-                    className={classnames({
-                      'left-img1': true,
-                      'icono-circle': !item.seleted,
-                      'icono-checkCircle': item.seleted,
-                    })}
-                  ></Text>
-                </View>
-                {!!item.icon ? (
-                  <Image className="left-img3" src={item.icon} />
-                ) : (
-                  <Text className="img-left-image img-text">{item.name}</Text>
-                )}
-                <View className="des">
-                  <View className="des1">
-                    {item.name}
-                    {item.summary && <Text className="des1-1">（{item.summary}）</Text>}
-                  </View>
-                  <View className="des2">{(item.des || []).length ? (item.des || []).join('/') : ''}</View>
-                  <View className="des3">{Number(item.orderPrice).toFixed(2)}</View>
-                </View>
+          // <AtSwipeAction
+          //   key={index}
+          //   maxDistance={maxDistance}
+          //   areaWidth={areaWidth}
+          //   options={[
+          //     {
+          //       text: '删除',
+          //       style: {
+          //         backgroundColor: '#FF4949',
+          //       },
+          //     },
+          //   ]}
+          //   onClick={() => {
+          //     // onActionClick(item, index)
+          //   }}
+          // >
+          <View className="shop-item">
+            <View className="left flex">
+              <View
+                onClick={() => {
+                  // onSeletedClick(item)
+                }}
+              >
+                <Text
+                  className={classnames({
+                    'left-img1': true,
+                    'icono-circle': !item.seleted,
+                    'icono-checkCircle': item.seleted,
+                  })}
+                ></Text>
               </View>
-              <View className="right">
-                <CartAdd
-                  step={1}
-                  min={1}
-                  valueNum={item.num}
-                  onGetValue={(value) => {
-                    console.log(value, item);
-                  }}
-                />
+              {!!item.icon ? (
+                <Image className="left-img3" src={item.icon} />
+              ) : (
+                <Text className="img-left-image img-text">{item.name}</Text>
+              )}
+              <View className="des">
+                <View className="des1">
+                  {item.name}
+                  {item.summary && <Text className="des1-1">（{item.summary}）</Text>}
+                </View>
+                <View className="des2">{(item.des || []).length ? (item.des || []).join('/') : ''}</View>
+                <View className="des3">{Number(item.orderPrice).toFixed(2)}</View>
               </View>
             </View>
-          </AtSwipeAction>
+            <View className="right">
+              <CartAdd
+                step={1}
+                min={1}
+                valueNum={item.num}
+                onGetValue={(value) => {
+                  console.log(value, item);
+                }}
+              />
+            </View>
+          </View>
+          // </AtSwipeAction>
         ))}
     </AtList>
   );

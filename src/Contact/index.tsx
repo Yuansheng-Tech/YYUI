@@ -35,30 +35,36 @@ export const YYContact = (props: IContactProps) => {
         borderRadius,
       }}
     >
-      <Image
-        className="yy-concat_logo"
-        src={logo}
-        onClick={() => {
-          // switchClick(0)
-        }}
-      />
+      {logo && (
+        <Image
+          className="yy-concat_logo"
+          src={logo}
+          onClick={() => {
+            // switchClick(0)
+          }}
+        />
+      )}
       <View className="yy-concat_text">
         <RichText nodes={notice} />
       </View>
-      <View className="yy-concat_button">
-        <Image className="yy-btn_tel yy-concat_button-image" src={telImage} onClick={() => getTel()} />
-        <Button
-          className="yy-btn_wx_wrap"
-          type="default"
-          openType="contact"
-          onContact={(e) => {
-            console.log(e.detail.path);
-            // console.log(e.detail.query)
-          }}
-        >
-          <Image className="yy-btn_wx yy-concat_button-image" src={wxImage} />
-        </Button>
-      </View>
+      {(telImage || wxImage) && (
+        <View className="yy-concat_button">
+          {telImage && <Image className="yy-btn_tel yy-concat_button-image" src={telImage} onClick={() => getTel()} />}
+          {wxImage && (
+            <Button
+              className="yy-btn_wx_wrap"
+              type="default"
+              openType="contact"
+              onContact={(e) => {
+                console.log(e.detail.path);
+                // console.log(e.detail.query)
+              }}
+            >
+              <Image className="yy-btn_wx yy-concat_button-image" src={wxImage} />
+            </Button>
+          )}
+        </View>
+      )}
     </View>
   );
 };

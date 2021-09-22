@@ -8,7 +8,11 @@ export const YYLoadGoodsGrid = (props: IgoodsGridProps) => {
   const { goodUrl = '', skip = 0, take = 10 } = props;
   const { goodStore, classifyStore } = useContext(createContext(new RootStore()));
   if (goodUrl) {
-    const { data, error } = useQuery(
+    const {
+      data: queryData = [],
+      loaded,
+      loading,
+    } = useQuery(
       {
         url: `${goodUrl}?${qs.stringify(
           Object.assign(
@@ -28,7 +32,6 @@ export const YYLoadGoodsGrid = (props: IgoodsGridProps) => {
       },
       {}
     );
-    const { data: queryData = [] } = data || {};
     goodStore.setDatas(queryData);
   }
   return <YYGoodsGrid {...props} data={goodStore.datas} />;

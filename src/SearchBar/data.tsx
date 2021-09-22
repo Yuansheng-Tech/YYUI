@@ -1,8 +1,10 @@
 import { AtSearchBarProps } from 'taro-ui/types/search-bar';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
 import { useContext, createContext } from 'react';
+import { IYYSearchBar } from '.';
 
-export const searchBarDataSource: AtSearchBarProps = {
+export const searchBarDataSource: AtSearchBarProps & IYYSearchBar = {
+  url: '',
   placeholder: '', // 输入框占位符
   actionName: '搜索', // 右侧按钮文案
   maxLength: 100, // 最大输入长度

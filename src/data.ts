@@ -15,7 +15,7 @@ export { spacelineDataSource } from './SpaceLine/data';
 export { tabBarDataSource } from './TabBar/data';
 export { tabsDataSource } from './Tabs/data';
 export { htmlPageDataSource } from './Html/data';
-export { imageDataSource } from './Image/data';
+export { imageDataSource, imageListDataSource } from './Image/data';
 export { containerDataSource } from './Container/data';
 export { mapDataSource } from './Map/data';
 export { cartBuyDataSource } from './CartBuy/data';

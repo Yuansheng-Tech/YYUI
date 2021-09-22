@@ -1,6 +1,34 @@
-import { AtGridProps } from 'taro-ui/types/grid';
+import { IGridProps } from '.';
+import { IImgBgGridProps } from './imgBg';
 
-export const gridDataSource: AtGridProps = {
+export const imgBgGridDataSource: IImgBgGridProps = {
+  mode: 'square', // square rect
+  hasBorder: true,
+  height: '100px',
+  columnNum: 3,
+  data: [
+    {
+      image: '//file.yuansheng.com/static/memo/files/菜篮子.png',
+      value: '2',
+      title: '菜篮子',
+      url: '',
+    },
+    {
+      image: '//file.yuansheng.com/static/memo/files/house%203.png',
+      title: '楼层',
+      value: '1',
+      url: '',
+    },
+    {
+      image: '//file.yuansheng.com/static/memo/files/house.png',
+      title: '商户',
+      value: '3',
+      url: '',
+    },
+  ],
+};
+
+export const gridDataSource: IGridProps = {
   mode: 'square', // square rect
   hasBorder: true,
   columnNum: 3,

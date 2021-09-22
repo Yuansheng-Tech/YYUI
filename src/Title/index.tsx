@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text } from '@tarojs/components';
+import { View, Text, Image } from '@tarojs/components';
 import { router } from '@ysyp/utils/dist/router';
+import { AtIcon } from 'taro-ui';
 
 // import { Title } from '@tarojs/components'
 // http://www.fhdq.net/bd/94.html
@@ -8,6 +9,7 @@ import { router } from '@ysyp/utils/dist/router';
 
 export interface ITitleProps {
   title: string;
+  icon?: string;
   subTitle?: string;
   more?: string;
   url?: string;
@@ -17,7 +19,7 @@ export interface ITitleProps {
 }
 
 export const YYTitle = (props: ITitleProps) => {
-  const { title, fontSize = '12px', padding = '10px', onClick } = props;
+  const { title, fontSize = '12px', padding = '10px', onClick, icon } = props;
   return (
     <View
       className="yy-title"
@@ -27,13 +29,24 @@ export const YYTitle = (props: ITitleProps) => {
       }}
       onClick={onClick}
     >
-      <Text className="yy-title-text">{title}</Text>
+      <Text className="yy-title-text">
+        {!!icon && (
+          <Image
+            src={icon}
+            className="yy-title-icon"
+            style={{
+              width: fontSize,
+            }}
+          />
+        )}
+        {title}
+      </Text>
     </View>
   );
 };
 
 export const YYSubTitle = (props: ITitleProps) => {
-  const { title, subTitle, more, url, fontSize = '12px', padding = '10px', onClick } = props;
+  const { title, icon, subTitle, more, url, fontSize = '12px', padding = '10px', onClick } = props;
   return (
     <View
       className="yy-title"
@@ -44,7 +57,18 @@ export const YYSubTitle = (props: ITitleProps) => {
       onClick={onClick}
     >
       <View className="yy-title-left">
-        <Text className="yy-title-text">{title}</Text>
+        <Text className="yy-title-text">
+          {!!icon && (
+            <Image
+              src={icon}
+              className="yy-title-icon"
+              style={{
+                width: fontSize,
+              }}
+            />
+          )}
+          {title}
+        </Text>
         {subTitle && <Text className="yy-title-subtext">{subTitle}</Text>}
       </View>
       {more && (

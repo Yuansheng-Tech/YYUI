@@ -1,0 +1,93 @@
+.shop-goods-item-detail {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.shop-goods-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+  .shop-goods-item-left {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+
+    .shop-goods-item-icon {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .shop-goods-item-center {
+    flex: 1;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    text-align: left;
+    justify-items: left;
+    align-items: left;
+
+    .shop-goods-item-name {
+      font-weight: bold;
+      font-size: 1.3em;
+      flex: 1;
+    }
+    .shop-goods-item-address {
+      flex: 1;
+      font-size: 0.8 * $baseSize;
+      color: gray;
+      margin-top: 10px;
+    }
+    .shop-goods-item-time {
+      flex: 1;
+      font-size: 0.8 * $baseSize;
+      color: gray;
+      margin-top: 10px;
+    }
+    .shop-goods-item-choose {
+      flex: 1;
+    }
+    .shop-goods-item-distance {
+      font-size: 0.7 * $baseSize;
+      flex: 1;
+    }
+  }
+  .shop-goods-item-right {
+    width: 120px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.shop-goods-item-good {
+  display: flex;
+  .shop-goods {
+    // width: 200px;
+    position: relative;
+    width: 30%;
+    margin: 2%;
+  }
+
+  .shop-goods-discount {
+    position: absolute;
+    z-index: 999;
+    background-color: #ff0000b3;
+    color: #fff;
+    padding: 2px 10px;
+  }
+  .shop-goods-icon {
+    width: 100%;
+    height: 140px;
+  }
+  .shop-goods-sale {
+    color: $mainColor;
+  }
+  .shop-goods-original {
+    margin-left: 10px;
+    font-size: 0.8em;
+    text-decoration: line-through;
+  }
+}

@@ -5,3 +5,10 @@
   width: 100%;
   height: initial;
 }
+.yy-image-list {
+  display: flex;
+  align-items: center;
+  .yy-image {
+    margin: 10px;
+  }
+}

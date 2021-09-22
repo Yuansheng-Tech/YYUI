@@ -1,0 +1,31 @@
+.shop-item-top {
+  padding: 10px;
+  &-detail {
+    display: flex;
+  }
+  &-left {
+    width: 100px;
+  }
+  &-icon {
+    width: 100%;
+  }
+  &-center {
+    flex: 1;
+    margin-left: 10px;
+  }
+  &-notice {
+    margin-top: 10px;
+    .at-noticebar {
+      padding: 5px;
+      background-color: #fff;
+    }
+  }
+  &-right {
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -32,7 +32,7 @@ export const YYShopList = (props: IShopList) => {
       <ScrollView className="shop-scroll" scrollY>
         <View className="shop-list">
           {data.map((v, k) => {
-            return <YYShopItem item={v} key={k} index={k} />;
+            return <YYShopItem {...v} key={k} index={k} />;
           })}
         </View>
       </ScrollView>

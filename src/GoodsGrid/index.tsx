@@ -37,6 +37,7 @@ export interface IgoodsGridProps {
   }[];
   cartImage?: string;
   onClick?: (val: AtGridItem, index?: number) => void;
+  style?: object;
 }
 
 export const YYGoodsGrid = (props: IgoodsGridProps) => {

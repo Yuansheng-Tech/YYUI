@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, Image } from '@tarojs/components';
 import { ImageProps } from '@tarojs/components/types/Image';
 import { router } from '@ysyp/utils/dist/router';
-import classnames from 'classnames';
 
 export interface IProps {
   url?: string;

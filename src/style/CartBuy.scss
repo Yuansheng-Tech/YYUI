@@ -1,5 +1,9 @@
 // @import './baseCss.scss';
 
+._price {
+  color: $mainColor;
+  font-size: 2em;
+}
 .yy {
   &-cart-buy {
     display: flex;
@@ -12,6 +16,22 @@
     // bottom: 0;
     // left: 0;
     // width: 100%;
+
+    .yy-cart-money {
+      flex: 5;
+      align-items: center;
+      display: flex;
+      font-size: 16px;
+      text-align: left;
+      margin: 0 10px;
+    }
+    .yy-cart-delivery_price {
+      flex: 3;
+    }
+    .yy-cart-total_price {
+      flex: 2;
+      text-align: right;
+    }
   }
   &-btn-radius {
     border-radius: rem(20px);
@@ -31,5 +51,6 @@
     align-items: center;
     border: none;
     vertical-align: top;
+    border-radius: 0;
   }
 }
