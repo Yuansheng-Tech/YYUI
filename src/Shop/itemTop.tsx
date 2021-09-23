@@ -37,7 +37,7 @@ export const YYShopItemTop = (props: IShopItemTop) => {
     >
       <View className="shop-item-top-detail">
         <View className="shop-item-top-left">
-          <Image className="shop-item-top-icon" src={icon} alt="" />
+          <Image className="shop-item-top-icon" src={icon} />
         </View>
         <View className="shop-item-top-center">
           {/* <Text className="shop-item-top-name">

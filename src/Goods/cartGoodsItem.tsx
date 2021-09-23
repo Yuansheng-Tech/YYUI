@@ -36,7 +36,7 @@ export const YYCartGoodsItem = (props: IYYCartGoodsItem) => {
     >
       <View className="cart-goods-top">
         {discount < 10 && <Text className="cart-goods-discount">{discount}折</Text>}
-        <Image mode="widthFix" className="cart-goods-icon" src={icon} alt="" />
+        <Image mode="widthFix" className="cart-goods-icon" src={icon} />
       </View>
       <View className="cart-goods-bottom">
         <View className="cart-goods-name">{name}</View>

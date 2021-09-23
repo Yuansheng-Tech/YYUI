@@ -5,6 +5,7 @@ import { View, Text } from '@tarojs/components';
 import classnames from 'classnames';
 
 export interface IShopItem {
+  index?: number | string;
   id: string;
   name: string;
   status: string;

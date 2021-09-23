@@ -36,7 +36,7 @@ export const YYShopGoodsItem = (props: IYYShopGoodsItem) => {
     >
       <View className="shop-goods-top">
         {discount < 10 && <Text className="shop-goods-discount">{discount}折</Text>}
-        <Image mode="widthFix" className="shop-goods-icon" src={icon} alt="" />
+        <Image mode="widthFix" className="shop-goods-icon" src={icon} />
       </View>
       <View className="shop-goods-bottom">
         <View className="shop-goods-name">{name}</View>

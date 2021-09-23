@@ -10,7 +10,7 @@ export interface IGridProps {
   data: {
     image: string;
     value: string;
-    url: string;
+    url?: string;
   }[];
 }
 

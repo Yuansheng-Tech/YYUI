@@ -48,7 +48,7 @@ export const YYShopWithGoodsItem = (props: IShopWithGoodsItem) => {
         }}
       >
         <View className="shop-goods-item-left">
-          <Image className="shop-goods-item-icon" src={icon} alt="" />
+          <Image className="shop-goods-item-icon" src={icon} />
         </View>
         <View className="shop-goods-item-center">
           <Text className="shop-goods-item-name">

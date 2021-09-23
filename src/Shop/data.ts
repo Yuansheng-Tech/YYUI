@@ -130,7 +130,7 @@ export const shopWithGoodsListDataSource: IShopWithGoodsList = {
           icon: 'http://file.yuansheng.com/static/memo/logos/19151604.png',
           name: '商品1',
           price: 20.0,
-          original_price: '22.00',
+          original_price: 22.0,
         },
         {
           id: '2',
