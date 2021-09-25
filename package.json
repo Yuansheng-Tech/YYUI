@@ -1,6 +1,6 @@
 {
   "name": "@ysyp/ui",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Taro UI for e-commerce system.",
   "keywords": [
     "taro",
@@ -40,15 +40,15 @@
     "dist"
   ],
   "scripts": {
-    "start": "tsc -w --preserveWatchOutput",
-    "docs": "typedoc --out docs src/index.ts",
     "prebuild": "del lib/* dist/* tsconfig.tsbuildinfo",
     "build": "yarn run clean && yarn run build:rollup && yarn run build:lib",
     "build:lib": "tsc --project ./tsconfig.build.json",
     "build:rollup": "rollup --config ./rollup.config.js",
     "clean": "rimraf .temp dist lib coverage",
-    "test": "",
-    "release": "np"
+    "docs": "typedoc --out docs src/index.ts",
+    "release": "np",
+    "start": "tsc -w --preserveWatchOutput",
+    "test": ""
   },
   "husky": {
     "hooks": {
