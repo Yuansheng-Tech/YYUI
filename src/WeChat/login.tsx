@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import Taro from '@tarojs/taro';
 import { Button, OpenData, View } from '@tarojs/components';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
 import { HTTP_STATUS } from '@ysyp/utils/dist/fetch';
