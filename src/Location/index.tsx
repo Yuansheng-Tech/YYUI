@@ -3,6 +3,8 @@ import Taro from '@tarojs/taro';
 import { View, Image } from '@tarojs/components';
 import { router } from '@ysyp/utils/dist/router';
 
+// https://lbs.qq.com/dev/console/application/mine
+
 export interface ILocationProps {
   margin?: string;
   padding?: string;
@@ -23,7 +25,7 @@ export const YYLocation = (props: ILocationProps) => {
     name,
     url,
     chooseAddress,
-    chooseLocation
+    chooseLocation,
   } = props;
 
   const handlePosition = () => {
@@ -39,16 +41,22 @@ export const YYLocation = (props: ILocationProps) => {
           // const longitude = res.longitude
           // const speed = res.speed
           // const accuracy = res.accuracy
-          console.log('res getLocation', res)
+          console.log('res getLocation', res);
           Taro.chooseLocation({
-            complete: (res) => {console.log('complete res', res)},
-            fail: (res) => {console.log('fail res', res)},
+            complete: (res) => {
+              console.log('complete res', res);
+            },
+            fail: (res) => {
+              console.log('fail res', res);
+            },
             latitude: res.latitude,
             longitude: res.longitude,
-            success: (res) => {console.log('success res', res)}, 
-          })
-        }
-      })
+            success: (res) => {
+              console.log('success res', res);
+            },
+          });
+        },
+      });
     } else if (chooseAddress) {
       Taro.chooseAddress({
         success: function (res) {
@@ -63,7 +71,7 @@ export const YYLocation = (props: ILocationProps) => {
         },
       });
     }
-  }
+  };
   return (
     <View
       className="yy-location-content"
@@ -75,7 +83,9 @@ export const YYLocation = (props: ILocationProps) => {
     >
       <Image className="yy-location-content_icon" src={locationImage} />
       {name && <View className="yy-location-content_text">{name}</View>}
-      <View className="yy-location-content_position" onClick={handlePosition}>重新定位</View>
+      <View className="yy-location-content_position" onClick={handlePosition}>
+        重新定位
+      </View>
     </View>
   );
 };

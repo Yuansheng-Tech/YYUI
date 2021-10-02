@@ -47,10 +47,10 @@ export const YYWechatLogin = (props: IWechatLoginProps) => {
   //获取用户基本信息
   const getUserData = async () => {
     const res = await miniUserStore.get();
+    console.log('res getUserData', res);
     if (res.nickName == '微信用户') {
       await miniUserStore.put({
-        // ...Taro.getStorageSync('userData'),
-        id: Taro.getStorageSync('userData').id,
+        id: Taro.getStorageSync('userDataProfile').id,
         nickName: Taro.getStorageSync('userDataProfile').nickName,
         avatarUrl: Taro.getStorageSync('userDataProfile').avatarUrl,
       });
@@ -82,7 +82,13 @@ export const YYWechatLogin = (props: IWechatLoginProps) => {
             ...data,
           });
 
-          console.log('response', response);
+          console.log(
+            'response',
+            response,
+            response.statusCode,
+            HTTP_STATUS.SUCCESS,
+            response.statusCode === HTTP_STATUS.SUCCESS
+          );
           // 用户已经注册
           if (response.statusCode === HTTP_STATUS.SUCCESS) {
             Taro.setStorageSync('accessToken', response.data.accessToken);

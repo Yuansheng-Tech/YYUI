@@ -32,11 +32,14 @@ import { loadMoreDataSource } from './LoadMore/data';
 import { cartListDataSource } from './CartList/data';
 import { goodSkuDataSource } from './GoodSku/data';
 import { h1DataSource, h2DataSource, h3DataSource, pDataSource, infoDataSource, imgDataSource } from './Article/data';
-
 import { transformDataSource } from './renderData';
-// import { iOSCardDataSource } from './IOSCard/data'
-import { shopItemDataSource, shopItemTopDataSource, shopListDataSource } from './Shop/data';
-import { shopWithGoodsItemDataSource, shopWithGoodsListDataSource } from './Shop/data';
+import {
+  shopItemDataSource,
+  shopItemTopDataSource,
+  shopListDataSource,
+  shopWithGoodsItemDataSource,
+  shopWithGoodsListDataSource,
+} from './Shop/data';
 import { wechatLoginDataSource } from './Wechat/data';
 import { locationDataSource } from './Location/data';
 
