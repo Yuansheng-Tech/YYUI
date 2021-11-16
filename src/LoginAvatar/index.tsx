@@ -1,8 +1,10 @@
-import React, { createContext, useContext, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import Taro, { useDidShow } from '@tarojs/taro';
 import { AtAvatar } from 'taro-ui';
 import { View, Text } from '@tarojs/components';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
 import { router } from '@ysyp/utils/dist/router';
+
 export interface ILoginAvatarProps {
   title?: string;
   defaultAvatar?: string;
@@ -13,25 +15,21 @@ export interface ILoginAvatarProps {
 
 export const YYLoginAvatar = (props: ILoginAvatarProps) => {
   const { title = '立即登录', defaultAvatar = '', backgroundColor, color, url = '/pages/login/index' } = props;
-  const rootStore = useContext(createContext(new RootStore()));
-  const getUserData = async () => {
-    const res = (await rootStore.miniUserStore.get()) || {};
-    rootStore.miniUserStore.userData = res;
-  };
+  const [userData, setUserData] = useState((Taro.getStorageSync('userDataProfile') || {}) as any)
 
-  useEffect(() => {
-    getUserData();
-  }, []);
-  console.log('rootStore', rootStore.miniUserStore);
+  useDidShow(async () => {
+    setUserData(Taro.getStorageSync('userDataProfile') || {})
+  })
+
   return (
     <View
-      className="yy-login-avatar"
+      className='yy-login-avatar'
       style={{
         backgroundColor,
         color,
       }}
       onClick={() => {
-        if (!rootStore.miniUserStore.userData.nickName) {
+        if (!userData.nickName) {
           router.navigateTo({
             url,
           });
@@ -39,12 +37,12 @@ export const YYLoginAvatar = (props: ILoginAvatarProps) => {
       }}
     >
       <AtAvatar
-        className="yy-avatar"
+        className='yy-avatar'
         circle
-        image={rootStore.miniUserStore.userData.avatarUrl || defaultAvatar}
-        text="您的头像"
+        image={userData.avatarUrl || defaultAvatar}
+        text='您的头像'
       ></AtAvatar>
-      <Text className="yy-login">{rootStore.miniUserStore.userData.nickName || title}</Text>
+      <Text className='yy-login'>{userData.nickName || title}</Text>
     </View>
   );
 };

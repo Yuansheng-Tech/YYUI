@@ -3,11 +3,16 @@ import { IButtonProps } from './index';
 
 export const buttonDataSource: IButtonProps & ButtonProps = {
   title: 'Button',
+  url: '',
+  store: 'weappStore',
   margin: '10px',
+  fixBottom: false,
   borderRadius: '30px',
 
   size: 'default',
   type: 'primary',
+  backgroundColor: '#fff',
+  color: '#000',
   plain: false,
   disabled: false,
   loading: false,

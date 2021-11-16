@@ -14,10 +14,18 @@
     }
     &-title {
       display: block;
-      margin-top: rem(5px);
+      margin-top: rem(4px);
       font-size: rem(16px);
       font-weight: 500;
       color: #353535;
+      padding: 0 rem(5px) rem(10px);
+    }
+    &-desc {
+      display: block;
+      margin-top: rem(2px);
+      font-size: rem(12px);
+      font-weight: 400;
+      color: #666;
       padding: 0 rem(5px) rem(10px);
     }
   }

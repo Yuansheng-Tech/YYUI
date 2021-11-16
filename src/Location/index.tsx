@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import Taro from '@tarojs/taro';
 import { View, Image } from '@tarojs/components';
 import { router } from '@ysyp/utils/dist/router';
+import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { useRootStore } from '@ysyp/stores/dist/RootStoreProvider';
 
 // https://lbs.qq.com/dev/console/application/mine
 
@@ -27,7 +29,9 @@ export const YYLocation = (props: ILocationProps) => {
     chooseAddress,
     chooseLocation,
   } = props;
-
+  console.log('props', props);
+  const [locationName, setLocationName] = useState(name)
+  const { addressStore } = useRootStore()
   const handlePosition = () => {
     if (url) {
       router.navigateTo({
@@ -41,6 +45,7 @@ export const YYLocation = (props: ILocationProps) => {
           // const longitude = res.longitude
           // const speed = res.speed
           // const accuracy = res.accuracy
+          addressStore.setLocation(res)
           console.log('res getLocation', res);
           Taro.chooseLocation({
             complete: (res) => {
@@ -52,6 +57,8 @@ export const YYLocation = (props: ILocationProps) => {
             latitude: res.latitude,
             longitude: res.longitude,
             success: (res) => {
+              setLocationName(res.name);
+              addressStore.setLocationName(res)
               console.log('success res', res);
             },
           });
@@ -60,6 +67,7 @@ export const YYLocation = (props: ILocationProps) => {
     } else if (chooseAddress) {
       Taro.chooseAddress({
         success: function (res) {
+          addressStore.setLocationName(res)
           console.log(res.userName);
           console.log(res.postalCode);
           console.log(res.provinceName);
@@ -74,16 +82,16 @@ export const YYLocation = (props: ILocationProps) => {
   };
   return (
     <View
-      className="yy-location-content"
+      className='yy-location-content'
       style={{
         margin,
         padding,
         borderRadius,
       }}
     >
-      <Image className="yy-location-content_icon" src={locationImage} />
-      {name && <View className="yy-location-content_text">{name}</View>}
-      <View className="yy-location-content_position" onClick={handlePosition}>
+      <Image className='yy-location-content_icon' src={locationImage} />
+      <View className='yy-location-content_text'>{locationName}</View>
+      <View className='yy-location-content_position' onClick={handlePosition}>
         重新定位
       </View>
     </View>

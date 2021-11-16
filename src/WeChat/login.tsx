@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import Taro from '@tarojs/taro';
 import { Button, OpenData, View } from '@tarojs/components';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { useRootStore } from '@ysyp/stores/dist/RootStoreProvider';
 import { HTTP_STATUS } from '@ysyp/utils/dist/fetch';
 
 export interface IWechatLoginProps {
@@ -13,11 +14,10 @@ export const YYWechatLogin = (props: IWechatLoginProps) => {
   const { loginText = '微信用户登录', warningText = '欢迎回来' } = props;
 
   const [btnText, setBtnText] = useState(loginText);
-  const rootStore = useContext(createContext(new RootStore()));
+  const rootStore = useRootStore();
   const { authStore, miniUserStore } = rootStore;
 
   const onGotUserInfo = (res) => {
-    console.log('res onGotUserInfo', res);
     Taro.getUserProfile({
       desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
@@ -47,34 +47,33 @@ export const YYWechatLogin = (props: IWechatLoginProps) => {
   //获取用户基本信息
   const getUserData = async () => {
     const res = await miniUserStore.get();
-    console.log('res getUserData', res);
-    if (res.nickName == '微信用户') {
+    console.log('getUserData res', res);
+    miniUserStore.setUserData(res.data)
+    if (res.data.nickName == '微信用户') {
       await miniUserStore.put({
         id: Taro.getStorageSync('userDataProfile').id,
         nickName: Taro.getStorageSync('userDataProfile').nickName,
         avatarUrl: Taro.getStorageSync('userDataProfile').avatarUrl,
       });
     }
-    console.log('res getUserData', res);
+    
     Taro.setStorageSync(
       'userData',
       Object.assign(
         Taro.getStorageSync('userData') || {},
         miniUserStore.userData,
-        res || {},
+        res.data || {},
         Taro.getStorageSync('userDataProfile') || {}
       )
     );
   };
   const agreeAuth = (data = {}) => {
-    const that = this;
     // 清除缓存
     Taro.setStorageSync('accessToken', '');
     Taro.setStorageSync('sessionKey', '');
     // 登录
     Taro.login({
       success: async (res) => {
-        console.log('login', res);
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
           const response = await authStore.wxlogin({
@@ -82,13 +81,6 @@ export const YYWechatLogin = (props: IWechatLoginProps) => {
             ...data,
           });
 
-          console.log(
-            'response',
-            response,
-            response.statusCode,
-            HTTP_STATUS.SUCCESS,
-            response.statusCode === HTTP_STATUS.SUCCESS
-          );
           // 用户已经注册
           if (response.statusCode === HTTP_STATUS.SUCCESS) {
             Taro.setStorageSync('accessToken', response.data.accessToken);

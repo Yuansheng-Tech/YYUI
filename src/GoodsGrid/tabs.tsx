@@ -19,7 +19,7 @@ export const YYTabGoods = (props: ITabGoodsProps) => {
   const { tabDirection, flexDirection, tabUrl, goodUrl } = props;
   return (
     <View
-      className="yy-tab-goods"
+      className='yy-tab-goods'
       style={{
         flexDirection,
       }}

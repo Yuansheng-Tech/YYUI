@@ -1,6 +1,6 @@
 import { AtSearchBarProps } from 'taro-ui/types/search-bar';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
-import { useContext, createContext } from 'react';
+import { useRootStore } from '@ysyp/stores/dist/RootStoreProvider';
 import { IYYSearchBar } from '.';
 
 export const searchBarDataSource: AtSearchBarProps & IYYSearchBar = {
@@ -14,12 +14,12 @@ export const searchBarDataSource: AtSearchBarProps & IYYSearchBar = {
   focus: false, // 是否聚焦
   showActionButton: false, // 是否一直显示右侧按钮
   inputType: 'text', // 'text' | 'number' | 'idcard' | 'digit'
-  onConfirm: (event) => {
-    console.log('onConfirm event', event, useContext(createContext(new RootStore())));
-  },
-  onActionClick: (event) => {
-    console.log('onConfirm event', event, useContext(createContext(new RootStore())));
-  },
+  // onConfirm: (event) => {
+  //   console.log('onConfirm event', event, useRootStore());
+  // },
+  // onActionClick: (event) => {
+  //   console.log('onConfirm event', event, useRootStore());
+  // },
   onChange: (value: string) => {
     console.log('onChange value, event', value);
   },

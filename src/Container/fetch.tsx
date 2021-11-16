@@ -2,6 +2,7 @@ import React, { createContext, useContext } from 'react';
 import * as qs from 'qs';
 
 import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { useRootStore } from '@ysyp/stores/dist/RootStoreProvider';
 import { useQuery } from '@ysyp/utils/dist/useQuery';
 
 export interface IFetchContainerProps {
@@ -14,7 +15,7 @@ export interface IFetchContainerProps {
 
 export const YYFecthContainer = (props: IFetchContainerProps) => {
   const { store, url = '', skip = 0, take = 10, children = null } = props;
-  const rootStore = useContext(createContext(new RootStore()));
+  const rootStore = useRootStore();
   let queryData = {};
   if (url) {
     const {

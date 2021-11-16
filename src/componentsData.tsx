@@ -24,7 +24,7 @@ import { cartGoodDataSource } from './CartGood/data';
 import { buttonDataSource } from './Button/data';
 import { listDataSource } from './List/data';
 import { imagePickerDataSource } from './ImagePicker/data';
-import { loginAvatarDataSource } from './LoginAvatar/data';
+import { loginAvatarDataSource, logoutDataSource } from './LoginAvatar/data';
 import { noticebarDataSource } from './Noticebar/data';
 import { contactDataSource } from './Contact/data';
 import { locationSwitchDataSource } from './LocationSwitch/data';
@@ -58,6 +58,13 @@ export const componentsData = [
       {
         name: 'YYButton',
         text: '按钮',
+        icon: 'https://file.yuanshengyoupin.com/files/button.png',
+        data: transformDataSource(buttonDataSource),
+        children: [],
+      },
+      {
+        name: 'YYSubmit',
+        text: '提交',
         icon: 'https://file.yuanshengyoupin.com/files/button.png',
         data: transformDataSource(buttonDataSource),
         children: [],
@@ -142,6 +149,13 @@ export const componentsData = [
         text: '登录头像',
         icon: 'https://file.yuanshengyoupin.com/files/Login.png',
         data: transformDataSource(loginAvatarDataSource),
+        children: [],
+      },
+      {
+        name: 'YYLogout',
+        text: '退出登录',
+        icon: '',
+        data: transformDataSource(logoutDataSource),
         children: [],
       },
       {

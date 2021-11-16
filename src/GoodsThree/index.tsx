@@ -3,6 +3,7 @@ import { View, Text, Image } from '@tarojs/components';
 import { ImageProps } from '@tarojs/components/types/Image';
 import { AtGridProps } from 'taro-ui/types/grid';
 import classnames from 'classnames';
+
 export interface IProps {
   url?: string;
   height?: string;
@@ -26,7 +27,7 @@ export const YYGoodsThree = (props: IProps & AtGridProps) => {
   console.log('YYGoodsThree data', data);
   return (
     <View
-      className="yy-goods-three"
+      className='yy-goods-three'
       style={{
         width: '100%',
         height,
@@ -49,9 +50,9 @@ export const YYGoodsThree = (props: IProps & AtGridProps) => {
               borderRadius: borderRadius,
             }}
           >
-            {image && <Image mode={imageMode || 'scaleToFill'} src={image} className="yy-goods-three-item-image" />}
+            {image && <Image mode={imageMode || 'scaleToFill'} src={image} className='yy-goods-three-item-image' />}
             <Text
-              className="yy-goods-three-item-title"
+              className='yy-goods-three-item-title'
               style={{
                 textAlign: textAlign || 'left',
               }}

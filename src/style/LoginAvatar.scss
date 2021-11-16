@@ -6,13 +6,23 @@
   padding: rem(10px);
 
   .yy-login {
-    flex: 1;
+    flex: 3;
     // align-items: center;
     // justify-content: center;
     line-height: rem(50px);
     font-size: rem(18px);
     margin-left: rem(10px);
+    color: #000;
   }
-  .yy-avatar {
-  }
+}
+
+.yy-logout {
+  width: 100%;
+  height: 68px;
+  line-height: 68px;
+  text-align: center;
+  background-color: $mainColor;
+  color: $white;
+  font-size: 30px;
+  margin-bottom: taro-tabbar-height;
 }

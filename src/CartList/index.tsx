@@ -28,7 +28,7 @@ export const YYCartList = (props: ICartListProps) => {
     list,
   } = props;
   return (
-    <AtList className="yy-cart-list">
+    <AtList className='yy-cart-list'>
       {!!list.length &&
         list.map((item, index) => (
           // <AtSwipeAction
@@ -47,8 +47,8 @@ export const YYCartList = (props: ICartListProps) => {
           //     // onActionClick(item, index)
           //   }}
           // >
-          <View className="shop-item">
-            <View className="left flex">
+          <View className='shop-item' key={index}>
+            <View className='left flex'>
               <View
                 onClick={() => {
                   // onSeletedClick(item)
@@ -63,20 +63,20 @@ export const YYCartList = (props: ICartListProps) => {
                 ></Text>
               </View>
               {!!item.icon ? (
-                <Image className="left-img3" src={item.icon} />
+                <Image className='left-img3' src={item.icon} />
               ) : (
-                <Text className="img-left-image img-text">{item.name}</Text>
+                <Text className='img-left-image img-text'>{item.name}</Text>
               )}
-              <View className="des">
-                <View className="des1">
+              <View className='des'>
+                <View className='des1'>
                   {item.name}
-                  {item.summary && <Text className="des1-1">（{item.summary}）</Text>}
+                  {item.summary && <Text className='des1-1'>（{item.summary}）</Text>}
                 </View>
-                <View className="des2">{(item.des || []).length ? (item.des || []).join('/') : ''}</View>
-                <View className="des3">{Number(item.orderPrice).toFixed(2)}</View>
+                <View className='des2'>{(item.des || []).length ? (item.des || []).join('/') : ''}</View>
+                <View className='des3'>{Number(item.orderPrice).toFixed(2)}</View>
               </View>
             </View>
-            <View className="right">
+            <View className='right'>
               <CartAdd
                 step={1}
                 min={1}

@@ -15,13 +15,15 @@ export interface ITabBarProps {
 
 export const YYTabBar = (props: ITabBarProps & AtTabBarProps) => {
   const { defaultValue, tabList } = props;
-  const [current, setCurrent] = React.useState(Number(defaultValue));
+  const [current, setCurrent] = React.useState(Number(defaultValue || '0'));
+  console.log('current', current, tabList[current]);
   return (
     <View className="yy-tabbar">
       <AtTabBar
         // scroll={props.tabList.length > 3}
         tabList={tabList}
         onClick={(data) => {
+          console.log('current data', data)
           setCurrent(data);
           const url = tabList.find((v) => Number(v.value) === data)?.url;
           url &&

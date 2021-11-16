@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from '@tarojs/components';
+
 export interface ISku {
   id: string;
   standard: string;
@@ -36,20 +37,20 @@ export const YYGoodSku = (props: IGoodSkuProps) => {
   } = props;
   return (
     <View
-      className="yy-skus-materiels"
+      className='yy-skus-materiels'
       style={{
         margin,
       }}
     >
       {(!!Object.keys(materielsGroup).length || !!Object.keys(skusGroup).length) && (
-        <View className="yy-skus-materiels-group">
-          <View className="yy-skus-group">
-            <View className="yy-skus-group-title">{'选择规格（单选）：'}</View>
+        <View className='yy-skus-materiels-group'>
+          <View className='yy-skus-group'>
+            <View className='yy-skus-group-title'>选择规格（单选）：</View>
             {Object.keys(skusGroup).map((v) => {
               return (
-                <View className="yy-skus-group-items" key={v}>
-                  <View className="yy-skus-group-items-title">{v}</View>
-                  <View className="yy-skus-items-group">
+                <View className='yy-skus-group-items' key={v}>
+                  <View className='yy-skus-group-items-title'>{v}</View>
+                  <View className='yy-skus-items-group'>
                     {skusGroup[v].map((item, index) => {
                       // item.checked && this.onSeletedClick(item, item.id, v, true);
                       return (
@@ -71,13 +72,13 @@ export const YYGoodSku = (props: IGoodSkuProps) => {
               );
             })}
           </View>
-          <View className="yy-skus-group">
-            <View className="yy-skus-group-title">{'选择加料（可多选）：'}</View>
+          <View className='yy-skus-group'>
+            <View className='yy-skus-group-title'>选择加料（可多选）：</View>
             {Object.keys(materielsGroup).map((v) => {
               return (
-                <View className="yy-skus-group-items" key={v}>
-                  <View className="yy-skus-group-items-title">{v}</View>
-                  <View className="yy-skus-items-group">
+                <View className='yy-skus-group-items' key={v}>
+                  <View className='yy-skus-group-items-title'>{v}</View>
+                  <View className='yy-skus-items-group'>
                     {materielsGroup[v].map((item, index) => {
                       // item.checked && this.onSeletedClick(item, item.id, v);
                       return (

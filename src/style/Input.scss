@@ -4,11 +4,12 @@
   flex-direction: row;
   padding: rem(5px);
   &-label {
-    width: rem(40px);
+    // width: rem(40px);
+    flex: 1;
     line-height: 2;
   }
   &-value {
-    flex: 1;
+    flex: 6;
     width: 100%;
     input {
       background-color: #fff;

@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import { AtTabs } from 'taro-ui';
 import { TabItem } from 'taro-ui/types/tab-bar';
 import { RootStore } from '@ysyp/stores/dist/RootStore';
+import { useRootStore } from '@ysyp/stores/dist/RootStoreProvider';
 export interface ITabsProps {
   store?: string;
   tabUrl?: string;
@@ -18,7 +19,7 @@ export interface ITabsProps {
 export const YYTabs = (props: ITabsProps) => {
   let { tabDirection = 'vertical', tabList = [], store, current: propsCurrent } = props;
   const [current, setCurrent] = useState(propsCurrent || 0);
-  const rootStore = useContext(createContext(new RootStore()));
+  const rootStore = useRootStore();
   return (
     <AtTabs
       scroll={tabList.length > 3}

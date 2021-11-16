@@ -2,11 +2,13 @@
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
+  font-size: 30px;
 }
 .shop-goods-item {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  font-size: 30px;
 
   .shop-goods-item-left {
     width: 160px;
@@ -40,7 +42,7 @@
     }
     .shop-goods-item-time {
       flex: 1;
-      font-size: 0.8 * $baseSize;
+      font-size: 0.8em;
       color: gray;
       margin-top: 10px;
     }
